@@ -1,0 +1,3 @@
+package core.org.apache.carbondata.core.util.comparator;
+
+public class StringSerializableComparator implements SerializableComparator { @ Override public int compare ( Object key1 , Object key2 ) { if ( key1 == null && key2 == null ) { return 0 ; } else if ( key1 == null ) { return - 1 ; } else if ( key2 == null ) { return 1 ; } return ByteUtil . compare ( ByteUtil . toBytes ( key1 . toString ( ) ) , ByteUtil . toBytes ( key2 . toString ( ) ) ) ; } }

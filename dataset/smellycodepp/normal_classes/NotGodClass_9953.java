@@ -1,0 +1,3 @@
+package serde.src.org.apache.hadoop.hive.serde2;
+
+public abstract class AbstractSerializer implements Serializer { public abstract void initialize ( Configuration conf , Properties tbl ) throws SerDeException ; public abstract Class < ? extends Writable > getSerializedClass ( ) ; public abstract Writable serialize ( Object obj , ObjectInspector objInspector ) throws SerDeException ; public abstract SerDeStats getSerDeStats ( ) ; }

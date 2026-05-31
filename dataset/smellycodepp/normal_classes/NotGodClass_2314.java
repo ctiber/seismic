@@ -1,0 +1,3 @@
+package core.org.apache.accumulo.core.client.lexicoder;
+
+public class BytesLexicoder extends AbstractLexicoder < byte [ ] > implements Lexicoder < byte [ ] > { @ Override public byte [ ] encode ( byte [ ] data ) { return data ; } @ Override public byte [ ] decode ( byte [ ] data ) { return data ; } @ Override protected byte [ ] decodeUnchecked ( byte [ ] data , int offset , int len ) { if ( offset == 0 && len == data . length ) { return data ; } byte [ ] copy = new byte [ len ] ; System . arraycopy ( data , offset , copy , 0 , len ) ; return copy ; } }

@@ -1,0 +1,3 @@
+package plugins.connection.core.org.apache.directory.studio.connection.core.jobs;
+
+public abstract class StudioConnectionRunnableWithProgressAdapter extends StudioRunnableWithProgressAdapter implements StudioConnectionRunnableWithProgress { private static final Connection [ ] EMPTY_CONNECTION_ARRAY = new Connection [ 0 ] ; public Connection [ ] getConnections ( ) { return EMPTY_CONNECTION_ARRAY ; } }

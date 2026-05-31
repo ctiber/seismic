@@ -1,0 +1,3 @@
+package src.org.apache.cocoon.sitemap;
+
+public class NotifyingGenerator extends AbstractGenerator { private Notifying notification ; public void setup ( SourceResolver resolver , Map objectModel , String src , Parameters par ) throws ProcessingException , SAXException , IOException { super . setup ( resolver , objectModel , src , par ) ; this . notification = ( Notifying ) objectModel . get ( Constants . NOTIFYING_OBJECT ) ; if ( this . notification == null ) { throw new ProcessingException ( "Expected Constants.NOTIFYING_OBJECT not found in object model" ) ; } } public void generate ( ) throws SAXException { Notifier . notify ( notification , this . contentHandler , "text/xml" ) ; } public void recycle ( ) { super . recycle ( ) ; this . notification = null ; } }

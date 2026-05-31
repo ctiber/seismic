@@ -1,0 +1,3 @@
+package catalog.org.apache.atlas.catalog;
+
+public class DefaultDateFormatter implements PropertyValueFormatter < Long , String > { public static final SimpleDateFormat DATE_FORMAT = new SimpleDateFormat ( "yyyy-MM-dd:HH:mm:ss" ) ; @ Override public String format ( Long l ) { Calendar calendar = new GregorianCalendar ( ) ; calendar . setTimeInMillis ( l ) ; return DATE_FORMAT . format ( calendar . getTime ( ) ) ; } }

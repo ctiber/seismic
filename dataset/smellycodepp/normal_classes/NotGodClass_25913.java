@@ -1,0 +1,3 @@
+package org.apache.commons.math3.analysis.function;
+
+public class Cbrt implements UnivariateDifferentiableFunction , DifferentiableUnivariateFunction { public double value ( double x ) { return FastMath . cbrt ( x ) ; } @ Deprecated public UnivariateFunction derivative ( ) { return FunctionUtils . toDifferentiableUnivariateFunction ( this ) . derivative ( ) ; } public DerivativeStructure value ( final DerivativeStructure t ) { return t . cbrt ( ) ; } }

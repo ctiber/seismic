@@ -1,0 +1,3 @@
+package framework.core.org.apache.manifoldcf.core;
+
+public abstract class DBInitializationCommand implements InitializationCommand { private final String userName ; private final String password ; public DBInitializationCommand ( String userName , String password ) { this . userName = userName ; this . password = password ; } public void execute ( ) throws ManifoldCFException { ManifoldCF . initializeEnvironment ( ) ; IThreadContext tc = ThreadContextFactory . make ( ) ; doExecute ( tc ) ; } protected abstract void doExecute ( IThreadContext tc ) throws ManifoldCFException ; protected String getPassword ( ) { return password ; } protected String getUserName ( ) { return userName ; } }

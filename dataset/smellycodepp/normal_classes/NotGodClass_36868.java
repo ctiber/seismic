@@ -1,0 +1,3 @@
+package buildtools.org.apache.pulsar.tests;
+
+@ SuppressWarnings ( "rawtypes" ) public class AnnotationListener implements IAnnotationTransformer { private static final long DEFAULT_TEST_TIMEOUT_MILLIS = TimeUnit . MINUTES . toMillis ( 5 ) ; public AnnotationListener ( ) { System . out . println ( "Created annotation listener" ) ; } @ Override public void transform ( ITestAnnotation annotation , Class testClass , Constructor testConstructor , Method testMethod ) { annotation . setRetryAnalyzer ( RetryAnalyzer . class ) ; if ( annotation . getTimeOut ( ) == 0 ) { annotation . setTimeOut ( DEFAULT_TEST_TIMEOUT_MILLIS ) ; } } }

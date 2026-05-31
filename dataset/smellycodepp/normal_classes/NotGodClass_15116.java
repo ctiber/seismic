@@ -1,0 +1,3 @@
+package connect.runtime.org.apache.kafka.connect.runtime;
+
+public class TaskConfig extends AbstractConfig { public static final String TASK_CLASS_CONFIG = "task.class" ; private static final String TASK_CLASS_DOC = "Name of the class for this task. Must be a subclass of org.apache.kafka.connect.connector.Task" ; private static ConfigDef config ; static { config = new ConfigDef ( ) . define ( TASK_CLASS_CONFIG , Type . CLASS , Importance . HIGH , TASK_CLASS_DOC ) ; } public TaskConfig ( ) { this ( new HashMap < String , String > ( ) ) ; } public TaskConfig ( Map < String , ? > props ) { super ( config , props , true ) ; } }

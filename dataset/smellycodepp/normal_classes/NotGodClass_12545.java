@@ -1,0 +1,3 @@
+package framework.minilang.src.org.ofbiz.minilang.method.callops;
+
+public static final class CallClassMethodFactory implements Factory < CallClassMethod > { @ Override public CallClassMethod createMethodOperation ( Element element , SimpleMethod simpleMethod ) throws MiniLangException { return new CallClassMethod ( element , simpleMethod ) ; } @ Override public String getName ( ) { return "call-class-method" ; } }

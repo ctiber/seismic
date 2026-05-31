@@ -1,0 +1,3 @@
+package core.org.apache.accumulo.core.client.lexicoder;
+
+public class IntegerLexicoder extends AbstractLexicoder < Integer > implements Lexicoder < Integer > { private UIntegerLexicoder uil = new UIntegerLexicoder ( ) ; @ Override public byte [ ] encode ( Integer i ) { return uil . encode ( i ^ 0x80000000 ) ; } @ Override public Integer decode ( byte [ ] b ) { return super . decode ( b ) ; } @ Override protected Integer decodeUnchecked ( byte [ ] data , int offset , int len ) { return uil . decodeUnchecked ( data , offset , len ) ^ 0x80000000 ; } }

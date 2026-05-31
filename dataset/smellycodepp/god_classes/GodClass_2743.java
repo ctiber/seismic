@@ -1,0 +1,1 @@
+class XMLWatchdog extends FileWatchdog { XMLWatchdog ( String filename ) { super ( filename ) ; } public void doOnChange ( ) { new DOMConfigurator ( ) . doConfigure ( filename , LogManager . getLoggerRepository ( ) ) ; } }

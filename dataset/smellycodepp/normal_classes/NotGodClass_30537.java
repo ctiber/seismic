@@ -1,0 +1,3 @@
+package connectors.alfresco.connector.org.apache.manifoldcf.crawler.connectors.alfresco;
+
+public class Constants extends org . alfresco . webservice . util . Constants { public static final String PROP_VERSION_LABEL = createQNameString ( NAMESPACE_CONTENT_MODEL , "versionLabel" ) ; public static final String PROP_NODE_UUID = createQNameString ( NAMESPACE_SYSTEM_MODEL , "node-uuid" ) ; public static final String PROP_STORE_PROTOCOL = createQNameString ( NAMESPACE_SYSTEM_MODEL , "store-protocol" ) ; public static final String PROP_STORE_ID = createQNameString ( NAMESPACE_SYSTEM_MODEL , "store-identifier" ) ; public static final String NODE_REFERENCE = createQNameString ( NAMESPACE_CONTENT_MODEL , "noderef" ) ; }

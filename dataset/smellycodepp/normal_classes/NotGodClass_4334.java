@@ -1,0 +1,3 @@
+package java.org.apache.jasper.xmlparser;
+
+protected static final class Entry { public String symbol ; public char [ ] characters ; public Entry next ; public Entry ( String symbol , Entry next ) { this . symbol = symbol . intern ( ) ; characters = new char [ symbol . length ( ) ] ; symbol . getChars ( 0 , characters . length , characters , 0 ) ; this . next = next ; } public Entry ( char [ ] ch , int offset , int length , Entry next ) { characters = new char [ length ] ; System . arraycopy ( ch , offset , characters , 0 , length ) ; symbol = new String ( characters ) . intern ( ) ; this . next = next ; } }

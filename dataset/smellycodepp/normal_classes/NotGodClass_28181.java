@@ -1,0 +1,3 @@
+package typesystem.org.apache.atlas.typesystem.types;
+
+public static class NullConversionException extends ValueConversionException { public NullConversionException ( Multiplicity m ) { super ( String . format ( "Null value not allowed for multiplicty %s" , m ) ) ; } public NullConversionException ( Multiplicity m , String msg ) { super ( String . format ( "Null value not allowed for multiplicty %s . Message %s" , m , msg ) ) ; } public NullConversionException ( String msg , Exception e ) { super ( msg , e ) ; } }

@@ -1,0 +1,1 @@
+protected static class JUnitLogStreamHandler extends PumpStreamHandler { public JUnitLogStreamHandler ( Task task , int outlevel , int errlevel ) { super ( new JUnitLogOutputStream ( task , outlevel ) , new LogOutputStream ( task , errlevel ) ) ; } }

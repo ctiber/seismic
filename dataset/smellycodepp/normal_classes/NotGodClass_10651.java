@@ -1,0 +1,3 @@
+package ql.src.org.apache.hadoop.hive.ql.exec.vector.expressions;
+
+public class StringRTrim extends StringUnaryUDFDirect { private static final long serialVersionUID = 1L ; public StringRTrim ( int inputColumn , int outputColumn ) { super ( inputColumn , outputColumn ) ; } public StringRTrim ( ) { super ( ) ; } protected void func ( BytesColumnVector outV , byte [ ] [ ] vector , int [ ] start , int [ ] length , int i ) { int j = start [ i ] + length [ i ] - 1 ; while ( j >= start [ i ] && vector [ i ] [ j ] == 0x20 ) { j -- ; } outV . setVal ( i , vector [ i ] , start [ i ] , ( j - start [ i ] ) + 1 ) ; } }

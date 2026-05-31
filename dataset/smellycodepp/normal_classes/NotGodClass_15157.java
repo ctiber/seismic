@@ -1,0 +1,3 @@
+package streams.org.apache.kafka.streams.errors;
+
+public class TopologyException extends StreamsException { private static final long serialVersionUID = 1L ; public TopologyException ( final String message ) { super ( "Invalid topology" + ( message == null ? "" : ": " + message ) ) ; } public TopologyException ( final String message , final Throwable throwable ) { super ( "Invalid topology" + ( message == null ? "" : ": " + message ) , throwable ) ; } public TopologyException ( final Throwable throwable ) { super ( throwable ) ; } }

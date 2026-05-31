@@ -1,0 +1,3 @@
+package java.org.apache.catalina.startup;
+
+final class SetAuthConstraintRule extends Rule { public SetAuthConstraintRule ( ) { } @ Override public void begin ( String namespace , String name , Attributes attributes ) throws Exception { SecurityConstraint securityConstraint = ( SecurityConstraint ) digester . peek ( ) ; securityConstraint . setAuthConstraint ( true ) ; if ( digester . getLogger ( ) . isDebugEnabled ( ) ) { digester . getLogger ( ) . debug ( "Calling SecurityConstraint.setAuthConstraint(true)" ) ; } } }

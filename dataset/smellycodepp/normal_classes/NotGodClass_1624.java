@@ -1,0 +1,3 @@
+package features.command.org.apache.karaf.features.command.completers;
+
+@ Service public class StartedFeatureCompleter extends FeatureCompleterSupport { @ Override protected boolean acceptsFeature ( Feature feature ) { return featuresService . getState ( feature . getId ( ) ) == FeatureState . Started ; } protected void add ( SortedSet < String > candidates , Feature feature ) { candidates . add ( feature . getId ( ) ) ; } }

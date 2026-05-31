@@ -1,0 +1,3 @@
+package plugins.ldapbrowser.ui.org.apache.directory.studio.ldapbrowser.ui.editors.schemabrowser;
+
+class LSDViewerFilter extends ViewerFilter { public boolean select ( Viewer viewer , Object parentElement , Object element ) { if ( element instanceof LdapSyntax ) { LdapSyntax lsd = ( LdapSyntax ) element ; boolean matched = Strings . toLowerCase ( SchemaUtils . toString ( lsd ) ) . indexOf ( Strings . toLowerCase ( filterText . getText ( ) ) ) != - 1 || Strings . toLowerCase ( lsd . getOid ( ) ) . indexOf ( Strings . toLowerCase ( filterText . getText ( ) ) ) != - 1 ; return matched ; } return false ; } }

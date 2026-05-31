@@ -1,0 +1,3 @@
+package sdk.sdk.org.apache.carbondata.sdk.file.arrow;
+
+class BooleanWriter extends ArrowFieldWriter { private BitVector bitVector ; public BooleanWriter ( BitVector bitVector ) { super ( bitVector ) ; this . bitVector = bitVector ; } @ Override public void setNull ( ) { bitVector . setNull ( count ) ; } @ Override public void setValue ( Object data , int ordinal ) { bitVector . setSafe ( count , ( Boolean ) data ? 1 : 0 ) ; } }

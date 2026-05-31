@@ -1,0 +1,3 @@
+package connectors.elasticsearch.connector.org.apache.manifoldcf.agents.output.elasticsearch;
+
+public class ElasticSearchAction extends ElasticSearchConnection { public enum CommandEnum { _optimize , _refresh , _status ; } public ElasticSearchAction ( HttpClient client , CommandEnum cmd , ElasticSearchConfig config , boolean checkConnection ) throws ManifoldCFException { super ( config , client ) ; StringBuffer url = getApiUrl ( cmd . toString ( ) , checkConnection ) ; HttpGet method = new HttpGet ( url . toString ( ) ) ; call ( method ) ; if ( "true" . equals ( checkJson ( jsonStatus ) ) ) return ; setResult ( Result . ERROR , checkJson ( jsonException ) ) ; } }

@@ -1,0 +1,3 @@
+package lang.mapred.org.apache.avro.mapred;
+
+public class AvroReducer < K , V , OUT > extends Configured implements JobConfigurable , Closeable { private Pair < K , V > outputPair ; @ SuppressWarnings ( "unchecked" ) public void reduce ( K key , Iterable < V > values , AvroCollector < OUT > collector , Reporter reporter ) throws IOException { if ( outputPair == null ) outputPair = new Pair < > ( AvroJob . getOutputSchema ( getConf ( ) ) ) ; for ( V value : values ) { outputPair . set ( key , value ) ; collector . collect ( ( OUT ) outputPair ) ; } } @ Override public void close ( ) throws IOException { } @ Override public void configure ( JobConf jobConf ) { } }

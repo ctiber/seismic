@@ -1,0 +1,3 @@
+package src.org.apache.cassandra.hadoop;
+
+public static class NullOutputCommitter extends OutputCommitter { public void abortTask ( TaskAttemptContext taskContext ) { } public void cleanupJob ( JobContext jobContext ) { } public void commitTask ( TaskAttemptContext taskContext ) { } public boolean needsTaskCommit ( TaskAttemptContext taskContext ) { return false ; } public void setupJob ( JobContext jobContext ) { } public void setupTask ( TaskAttemptContext taskContext ) { } }

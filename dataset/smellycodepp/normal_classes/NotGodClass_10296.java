@@ -1,0 +1,3 @@
+package beeline.src.org.apache.hive.beeline;
+
+public class ReflectiveCommandHandler extends AbstractCommandHandler { private final BeeLine beeLine ; public ReflectiveCommandHandler ( BeeLine beeLine , String [ ] cmds , Completor [ ] completor ) { super ( beeLine , cmds , beeLine . loc ( "help-" + cmds [ 0 ] ) , completor ) ; this . beeLine = beeLine ; } public boolean execute ( String line ) { try { Object ob = beeLine . getCommands ( ) . getClass ( ) . getMethod ( getName ( ) , new Class [ ] { String . class } ) . invoke ( beeLine . getCommands ( ) , new Object [ ] { line } ) ; return ob != null && ob instanceof Boolean && ( ( Boolean ) ob ) . booleanValue ( ) ; } catch ( Throwable e ) { return beeLine . error ( e ) ; } } }

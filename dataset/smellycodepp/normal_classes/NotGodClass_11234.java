@@ -1,0 +1,3 @@
+package integration.spark.org.apache.carbondata.spark.load;
+
+public class DecimalSerializableComparator implements SerializableComparator { @ Override public int compare ( Object key1 , Object key2 ) { if ( key1 == null && key2 == null ) { return 0 ; } else if ( key1 == null ) { return - 1 ; } else if ( key2 == null ) { return 1 ; } return ( ( Decimal ) key1 ) . compareTo ( ( Decimal ) key2 ) ; } }

@@ -1,0 +1,3 @@
+package plugins.apacheds.configuration.org.apache.directory.studio.apacheds.configuration.editor;
+
+public class ServerConfigurationInput implements IEditorInput { public String getToolTipText ( ) { return getName ( ) ; } public String getName ( ) { return "ServerConfigurationInput" ; } public boolean exists ( ) { return true ; } public ImageDescriptor getImageDescriptor ( ) { return ApacheDS2ConfigurationPlugin . getDefault ( ) . getImageDescriptor ( ApacheDS2ConfigurationPluginConstants . IMG_EDITOR ) ; } public IPersistableElement getPersistable ( ) { return null ; } @ SuppressWarnings ( "rawtypes" ) public Object getAdapter ( Class adapter ) { return null ; } }

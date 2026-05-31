@@ -1,0 +1,3 @@
+package plugins.openldap.acl.editor.org.apache.directory.studio.openldap.config.acl.widgets.composites;
+
+public class WhoClauseAnonymousComposite extends AbstractWhoClauseComposite < AclWhoClauseAnonymous > { public WhoClauseAnonymousComposite ( OpenLdapAclValueWithContext context , AclWhoClauseAnonymous clause , Composite visualEditorComposite ) { super ( context , clause , visualEditorComposite ) ; } public WhoClauseAnonymousComposite ( OpenLdapAclValueWithContext context , Composite visualEditorComposite ) { super ( context , new AclWhoClauseAnonymous ( ) , visualEditorComposite ) ; } }

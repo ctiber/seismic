@@ -1,0 +1,3 @@
+package ql.src.org.apache.hadoop.hive.ql.udf.generic;
+
+@ Description ( name = "ewah_bitmap_and" , value = "_FUNC_(b1, b2) - Return an EWAH-compressed bitmap that is the bitwise AND of two bitmaps." ) public class GenericUDFEWAHBitmapAnd extends AbstractGenericUDFEWAHBitmapBop { public GenericUDFEWAHBitmapAnd ( ) { super ( "EWAH_BITMAP_AND" ) ; } @ Override protected EWAHCompressedBitmap bitmapBop ( EWAHCompressedBitmap bitmap1 , EWAHCompressedBitmap bitmap2 ) { return bitmap1 . and ( bitmap2 ) ; } }

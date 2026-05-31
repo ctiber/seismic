@@ -1,0 +1,3 @@
+package core.metamodel.org.apache.isis.core.metamodel.facets.actions.action.associatewith;
+
+public abstract class AssociatedWithFacetAbstract extends SingleStringValueFacetAbstract implements AssociatedWithFacet { public static Class < ? extends Facet > type ( ) { return AssociatedWithFacet . class ; } public AssociatedWithFacetAbstract ( final String value , final FacetHolder holder ) { super ( type ( ) , holder , value ) ; } }

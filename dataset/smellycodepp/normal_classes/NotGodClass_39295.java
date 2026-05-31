@@ -1,0 +1,3 @@
+package core.metamodel.org.apache.isis.objectstore.jdo.metamodel.facets.object.persistencecapable;
+
+public class JdoPersistenceCapableFacetImpl extends JdoPersistenceCapableFacetAbstract { public JdoPersistenceCapableFacetImpl ( final String schemaName , final String tableOrTypeName , final IdentityType identityType , final FacetHolder holder ) { super ( schemaName , tableOrTypeName , identityType , holder ) ; } }

@@ -1,0 +1,3 @@
+package core.specsupport.org.apache.isis.core.specsupport.specs;
+
+@ Deprecated public abstract class CukeGlueBootstrappingAbstract extends HeadlessWithBootstrappingAbstract { protected CukeGlueBootstrappingAbstract ( final Module module ) { super ( module ) ; } @ Before ( order = 100 ) public void beforeScenario ( ) { super . bootstrapAndSetupIfRequired ( ) ; } @ After public void afterScenario ( cucumber . api . Scenario sc ) { super . tearDownAllModules ( ) ; } }

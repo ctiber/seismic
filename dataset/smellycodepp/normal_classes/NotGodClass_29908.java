@@ -1,0 +1,3 @@
+package core.org.apache.struts2.views.xslt;
+
+static class EntryElement extends AbstractAdapterElement { Object key , value ; public EntryElement ( AdapterFactory adapterFactory , AdapterNode parent , String propertyName , Object key , Object value ) { setContext ( adapterFactory , parent , propertyName , null ) ; this . key = key ; this . value = value ; } protected List < Node > buildChildAdapters ( ) { List < Node > children = new ArrayList < Node > ( ) ; children . add ( getAdapterFactory ( ) . adaptNode ( this , "key" , key ) ) ; children . add ( getAdapterFactory ( ) . adaptNode ( this , "value" , value ) ) ; return children ; } }

@@ -1,0 +1,3 @@
+package core.metamodel.org.apache.isis.core.metamodel.facets.properties.property.modify;
+
+public class PropertySetterFacetForDomainEventFromDefault extends PropertySetterOrClearFacetForDomainEventAbstract implements PropertySetterFacet { public PropertySetterFacetForDomainEventFromDefault ( final Class < ? extends PropertyDomainEvent < ? , ? > > eventType , final PropertyOrCollectionAccessorFacet getterFacet , final PropertySetterFacet setterFacet , final PropertyDomainEventFacetAbstract propertyInteractionFacet , final FacetHolder holder , final ServicesInjector servicesInjector ) { super ( PropertySetterFacet . class , eventType , getterFacet , setterFacet , null , propertyInteractionFacet , servicesInjector , holder ) ; } }

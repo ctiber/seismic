@@ -1,0 +1,3 @@
+package src.org.apache.cocoon.transformation.helpers;
+
+public class PreemptiveLoaderAction extends ServiceableAction implements ThreadSafe { public Map act ( Redirector redirector , SourceResolver resolver , Map objectModel , String source , Parameters parameters ) throws Exception { PreemptiveLoader loader = PreemptiveLoader . getInstance ( ) ; if ( ! loader . alive ) { loader . process ( this . manager , resolver , this . getLogger ( ) ) ; return EMPTY_MAP ; } return null ; } }

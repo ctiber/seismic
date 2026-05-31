@@ -1,0 +1,1 @@
+public static class WritableFiles extends EnumeratedAttribute { public String [ ] getValues ( ) { return new String [ ] { WRITABLE_REPLACE , WRITABLE_SKIP , WRITABLE_FAIL } ; } }

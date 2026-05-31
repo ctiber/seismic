@@ -1,0 +1,3 @@
+package core.org.apache.carbondata.core.scan.model;
+
+public class ProjectionColumn { protected String columnName ; private int projectionOrdinal ; ProjectionColumn ( String columnName ) { this . columnName = columnName ; } public String getColumnName ( ) { return columnName ; } public int getOrdinal ( ) { return projectionOrdinal ; } public void setOrdinal ( int projectionOrdinal ) { this . projectionOrdinal = projectionOrdinal ; } }

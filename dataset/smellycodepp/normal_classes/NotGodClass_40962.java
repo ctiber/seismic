@@ -1,0 +1,3 @@
+package core.provisioning.org.apache.syncope.core.provisioning.cache;
+
+public class DisabledVirAttrCache implements VirAttrCache { public DisabledVirAttrCache ( final int ttl , final int maxCacheSize ) { } @ Override public void expire ( final String type , final String key , final String schemaKey ) { } @ Override public VirAttrCacheValue get ( final String type , final String key , final String schemaKey ) { return null ; } @ Override public boolean isValidEntry ( final VirAttrCacheValue value ) { return false ; } @ Override public void put ( final String type , final String key , final String schemaName , final VirAttrCacheValue value ) { } }

@@ -1,0 +1,3 @@
+package client.console.org.apache.syncope.client.console.commons;
+
+public final class ConnIdSpecialName { public static final String ENABLE = "__ENABLE__" ; public static final String NAME = "__NAME__" ; public static final String UID = "__UID__" ; public static final String PASSWORD = "__PASSWORD__" ; public static final String ACCOUNT = "__ACCOUNT__" ; public static final String GROUP = "__GROUP__" ; private ConnIdSpecialName ( ) { } }

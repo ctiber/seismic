@@ -1,0 +1,3 @@
+package sdk.sdk.org.apache.carbondata.sdk.file.arrow;
+
+class FloatWriter extends ArrowFieldWriter { private Float4Vector float4Vector ; public FloatWriter ( Float4Vector float4Vector ) { super ( float4Vector ) ; this . float4Vector = float4Vector ; } @ Override public void setNull ( ) { this . float4Vector . setNull ( count ) ; } @ Override public void setValue ( Object data , int ordinal ) { this . float4Vector . setSafe ( count , ( float ) data ) ; } }

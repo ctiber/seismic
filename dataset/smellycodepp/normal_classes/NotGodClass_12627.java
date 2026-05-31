@@ -1,0 +1,3 @@
+package framework.minilang.src.org.ofbiz.minilang.method.otherops;
+
+public static final class PropertyToFieldFactory implements Factory < PropertyToField > { @ Override public PropertyToField createMethodOperation ( Element element , SimpleMethod simpleMethod ) throws MiniLangException { return new PropertyToField ( element , simpleMethod ) ; } @ Override public String getName ( ) { return "property-to-field" ; } }

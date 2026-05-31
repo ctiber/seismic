@@ -1,0 +1,3 @@
+package java.org.apache.catalina.startup;
+
+final class IgnoreAnnotationsRule extends Rule { public IgnoreAnnotationsRule ( ) { } @ Override public void begin ( String namespace , String name , Attributes attributes ) throws Exception { WebXml webxml = ( WebXml ) digester . peek ( digester . getCount ( ) - 1 ) ; String value = attributes . getValue ( "metadata-complete" ) ; if ( "true" . equals ( value ) ) { webxml . setMetadataComplete ( true ) ; } else if ( "false" . equals ( value ) ) { webxml . setMetadataComplete ( false ) ; } if ( digester . getLogger ( ) . isDebugEnabled ( ) ) { digester . getLogger ( ) . debug ( webxml . getClass ( ) . getName ( ) + ".setMetadataComplete( " + webxml . isMetadataComplete ( ) + ")" ) ; } } }

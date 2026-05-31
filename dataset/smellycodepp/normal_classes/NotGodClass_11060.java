@@ -1,0 +1,3 @@
+package core.org.apache.carbondata.core.datastore.chunk.store.impl.safe;
+
+public class SafeVariableIntLengthDimensionDataChunkStore extends SafeVariableLengthDimensionDataChunkStore { public SafeVariableIntLengthDimensionDataChunkStore ( boolean isInvertedIndex , int numberOfRows , int dataLength ) { super ( isInvertedIndex , numberOfRows , dataLength ) ; } @ Override protected int getLengthSize ( ) { return CarbonCommonConstants . INT_SIZE_IN_BYTE ; } @ Override protected int getLengthFromBuffer ( ByteBuffer buffer ) { return buffer . getInt ( ) ; } }

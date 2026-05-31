@@ -1,0 +1,3 @@
+package clients.org.apache.kafka.clients.admin;
+
+@ InterfaceStability . Evolving public class RenewDelegationTokenOptions extends AbstractOptions < RenewDelegationTokenOptions > { private long renewTimePeriodMs = - 1 ; public RenewDelegationTokenOptions renewTimePeriodMs ( long renewTimePeriodMs ) { this . renewTimePeriodMs = renewTimePeriodMs ; return this ; } public long renewTimePeriodMs ( ) { return renewTimePeriodMs ; } }

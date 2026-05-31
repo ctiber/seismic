@@ -1,0 +1,3 @@
+package core.metamodel.org.apache.isis.core.metamodel.layoutmetadata;
+
+public class MemberRepr { public Map < String , ActionRepr > actions ; public PropertyLayoutFacetRepr propertyLayout ; public CollectionLayoutFacetRepr collectionLayout ; @ Deprecated public CssClassFacetRepr cssClass ; @ Deprecated public DescribedAsFacetRepr describedAs ; @ Deprecated public NamedFacetRepr named ; @ Deprecated public DisabledFacetRepr disabled ; @ Deprecated public HiddenFacetRepr hidden ; @ Deprecated public MultiLineFacetRepr multiLine ; @ Deprecated public TypicalLengthFacetRepr typicalLength ; @ Deprecated public PagedFacetRepr paged ; @ Deprecated public RenderFacetRepr render ; }

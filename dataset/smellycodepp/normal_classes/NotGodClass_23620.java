@@ -1,0 +1,3 @@
+package rt.frontend.jaxws.jaxws22.org.apache.cxf.jaxws22;
+
+public class JAXWS22Invoker extends JAXWSMethodInvoker implements Invoker { javax . xml . ws . spi . Invoker invoker ; public JAXWS22Invoker ( javax . xml . ws . spi . Invoker inv ) { super ( null ) ; invoker = inv ; } @ Override protected Object performInvocation ( Exchange exchange , final Object serviceObject , Method m , Object [ ] paramArray ) throws Exception { return invoker . invoke ( m , paramArray ) ; } }

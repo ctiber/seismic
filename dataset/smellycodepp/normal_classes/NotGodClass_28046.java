@@ -1,0 +1,3 @@
+package notification.org.apache.atlas.kafka;
+
+public class NotificationProvider { private static KafkaNotification kafka ; public static KafkaNotification get ( ) { if ( kafka == null ) { try { Configuration applicationProperties = ApplicationProperties . get ( ) ; kafka = new KafkaNotification ( applicationProperties ) ; } catch ( AtlasException e ) { throw new RuntimeException ( e ) ; } } return kafka ; } }

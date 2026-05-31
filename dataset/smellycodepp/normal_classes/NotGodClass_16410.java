@@ -1,0 +1,3 @@
+package src.blocks.faces.org.apache.cocoon.faces.samples.carstore;
+
+public class FirstNameChanged extends Object implements ValueChangeListener { public void processValueChange ( ValueChangeEvent event ) throws AbortProcessingException { if ( null != event . getNewValue ( ) ) { FacesContext . getCurrentInstance ( ) . getExternalContext ( ) . getSessionMap ( ) . put ( "firstName" , event . getNewValue ( ) ) ; } } public PhaseId getPhaseId ( ) { return PhaseId . ANY_PHASE ; } }

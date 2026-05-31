@@ -1,0 +1,3 @@
+package core.org.apache.accumulo.core.client.replication;
+
+public class PeerExistsException extends Exception { private static final long serialVersionUID = 1L ; public PeerExistsException ( String peer ) { this ( peer , ( String ) null ) ; } public PeerExistsException ( String peer , String message ) { super ( "Peer '" + peer + "' already exists" + ( null == message || message . isEmpty ( ) ? "" : message ) ) ; } public PeerExistsException ( String message , Throwable cause ) { super ( message , cause ) ; } }

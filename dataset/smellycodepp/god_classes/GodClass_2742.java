@@ -1,0 +1,1 @@
+class LogBrokerMonitorWindowAdaptor extends WindowAdapter { protected LogBrokerMonitor _monitor ; public LogBrokerMonitorWindowAdaptor ( LogBrokerMonitor monitor ) { _monitor = monitor ; } public void windowClosing ( WindowEvent ev ) { _monitor . requestClose ( ) ; } }

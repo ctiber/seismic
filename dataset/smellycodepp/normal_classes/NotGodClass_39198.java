@@ -1,0 +1,3 @@
+package core.metamodel.org.apache.isis.core.metamodel.facets.properties.businesskey;
+
+public abstract class BusinessKeyFacetAbstract extends SingleStringValueFacetAbstract implements BusinessKeyFacet { public static Class < ? extends Facet > type ( ) { return BusinessKeyFacet . class ; } public BusinessKeyFacetAbstract ( final String value , final FacetHolder holder ) { super ( type ( ) , holder , value ) ; } }

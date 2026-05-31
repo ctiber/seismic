@@ -1,0 +1,3 @@
+package framework.agents.org.apache.manifoldcf.agents.common;
+
+protected static class MyEntityResolver implements org . xml . sax . EntityResolver { public org . xml . sax . InputSource resolveEntity ( java . lang . String publicId , java . lang . String systemId ) throws SAXException , java . io . IOException { return new org . xml . sax . InputSource ( new ByteArrayInputStream ( "<?xml version='1.0' encoding='UTF-8'?>" . getBytes ( ) ) ) ; } }

@@ -1,0 +1,3 @@
+package connect.transforms.org.apache.kafka.connect.transforms;
+
+public static class Value < R extends ConnectRecord < R > > extends HoistField < R > { @ Override protected Schema operatingSchema ( R record ) { return record . valueSchema ( ) ; } @ Override protected Object operatingValue ( R record ) { return record . value ( ) ; } @ Override protected R newRecord ( R record , Schema updatedSchema , Object updatedValue ) { return record . newRecord ( record . topic ( ) , record . kafkaPartition ( ) , record . keySchema ( ) , record . key ( ) , updatedSchema , updatedValue , record . timestamp ( ) ) ; } }

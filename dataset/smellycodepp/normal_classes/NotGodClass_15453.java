@@ -1,0 +1,3 @@
+package connect.transforms.org.apache.kafka.connect.transforms;
+
+public static final class Value < R extends ConnectRecord < R > > extends MaskField < R > { @ Override protected Schema operatingSchema ( R record ) { return record . valueSchema ( ) ; } @ Override protected Object operatingValue ( R record ) { return record . value ( ) ; } @ Override protected R newRecord ( R record , Object updatedValue ) { return record . newRecord ( record . topic ( ) , record . kafkaPartition ( ) , record . keySchema ( ) , record . key ( ) , record . valueSchema ( ) , updatedValue , record . timestamp ( ) ) ; } }

@@ -1,0 +1,3 @@
+package rt.databinding.aegis.org.apache.cxf.aegis.databinding;
+
+public class AegisServiceConfiguration extends AbstractServiceConfiguration { @ Override public String getServiceNamespace ( ) { String ret = super . getServiceNamespace ( ) ; if ( ret == null ) { ret = NamespaceHelper . makeNamespaceFromClassName ( getServiceFactory ( ) . getServiceClass ( ) . getName ( ) , "http" ) ; } return ret ; } }

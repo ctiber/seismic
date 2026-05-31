@@ -1,0 +1,3 @@
+package metastore.src.org.apache.hadoop.hive.metastore.events;
+
+public class AddPartitionEvent extends ListenerEvent { private final Table table ; private final List < Partition > partitions ; public AddPartitionEvent ( Table table , List < Partition > partitions , boolean status , HMSHandler handler ) { super ( status , handler ) ; this . table = table ; this . partitions = partitions ; } public AddPartitionEvent ( Table table , Partition partition , boolean status , HMSHandler handler ) { this ( table , Arrays . asList ( partition ) , status , handler ) ; } public Table getTable ( ) { return table ; } public List < Partition > getPartitions ( ) { return partitions ; } }

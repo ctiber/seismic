@@ -1,0 +1,3 @@
+package core.org.apache.calcite.materialize;
+
+public class Lattices { private Lattices ( ) { } public static final LatticeStatisticProvider . Factory SQL = SqlLatticeStatisticProvider . FACTORY ; public static final LatticeStatisticProvider . Factory CACHED_SQL = SqlLatticeStatisticProvider . CACHED_FACTORY ; public static final LatticeStatisticProvider . Factory PROFILER = ProfilerLatticeStatisticProvider . FACTORY ; }

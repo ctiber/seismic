@@ -1,0 +1,3 @@
+package sdks.core.org.apache.beam.sdk.util;
+
+public class IllegalMutationException extends RuntimeException { private Object savedValue ; private Object newValue ; public IllegalMutationException ( String message , Object savedValue , Object newValue ) { super ( message ) ; this . savedValue = savedValue ; this . newValue = newValue ; } public IllegalMutationException ( String message , Object savedValue , Object newValue , Throwable cause ) { super ( message , cause ) ; this . savedValue = savedValue ; this . newValue = newValue ; } public Object getSavedValue ( ) { return savedValue ; } public Object getNewValue ( ) { return newValue ; } }

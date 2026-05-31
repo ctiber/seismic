@@ -1,0 +1,3 @@
+package catalog.org.apache.atlas.catalog.projection;
+
+public class RelationSet { private final String m_name ; private final Collection < VertexWrapper > m_vertices ; public RelationSet ( String name , Collection < VertexWrapper > vertices ) { m_name = name ; m_vertices = vertices ; } public String getName ( ) { return m_name ; } public Collection < VertexWrapper > getVertices ( ) { return Collections . unmodifiableCollection ( m_vertices ) ; } }

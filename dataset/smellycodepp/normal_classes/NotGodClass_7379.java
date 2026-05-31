@@ -1,0 +1,3 @@
+package core.org.apache.calcite.sql.fun;
+
+public class SqlCollectionTableOperator extends SqlFunctionalOperator { private final SqlModality modality ; public SqlCollectionTableOperator ( String name , SqlModality modality ) { super ( name , SqlKind . COLLECTION_TABLE , 200 , true , ReturnTypes . ARG0 , null , OperandTypes . ANY ) ; this . modality = modality ; } public SqlModality getModality ( ) { return modality ; } }

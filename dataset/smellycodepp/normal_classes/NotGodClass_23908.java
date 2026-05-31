@@ -1,0 +1,3 @@
+package tools.corba.org.apache.cxf.tools.corba.common.idltypes;
+
+public final class IdlAnonArray extends IdlArrayBase { private IdlAnonArray ( IdlScopeBase parent , IdlType elem , int size ) { super ( parent , "" , elem , size ) ; } public static IdlAnonArray create ( IdlScopeBase parent , IdlType elem , int size ) { return new IdlAnonArray ( parent , elem , size ) ; } public void write ( PrintWriter pw ) { } }

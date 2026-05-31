@@ -1,0 +1,3 @@
+package plugins.openldap.acl.editor.org.apache.directory.studio.openldap.config.acl.model;
+
+public class AclWhoClauseSsf extends AbstractAclWhoClauseCryptoStrength { public String toString ( ) { StringBuilder sb = new StringBuilder ( ) ; sb . append ( "ssf=" + strength ) ; String whoClauseToString = super . toString ( ) ; if ( whoClauseToString . length ( ) > 0 ) { sb . append ( " " ) ; sb . append ( whoClauseToString ) ; } return sb . toString ( ) ; } }

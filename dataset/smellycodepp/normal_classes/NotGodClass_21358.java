@@ -1,0 +1,3 @@
+package sdks.core.org.apache.beam.sdk.metrics;
+
+@ Experimental ( Kind . METRICS ) @ AutoValue public abstract class DistributionResult { public abstract long getSum ( ) ; public abstract long getCount ( ) ; public abstract long getMin ( ) ; public abstract long getMax ( ) ; public double getMean ( ) { return ( 1.0 * getSum ( ) ) / getCount ( ) ; } public static final DistributionResult IDENTITY_ELEMENT = create ( 0 , 0 , Long . MAX_VALUE , Long . MIN_VALUE ) ; public static DistributionResult create ( long sum , long count , long min , long max ) { return new AutoValue_DistributionResult ( sum , count , min , max ) ; } }

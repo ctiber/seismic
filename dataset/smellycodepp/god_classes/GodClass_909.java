@@ -1,0 +1,1 @@
+public static class TargetElement { private String name ; public TargetElement ( ) { } public void setName ( String name ) { this . name = name ; } public String getName ( ) { return name ; } }

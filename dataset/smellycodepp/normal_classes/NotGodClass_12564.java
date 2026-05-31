@@ -1,0 +1,3 @@
+package framework.minilang.src.org.ofbiz.minilang.method.entityops;
+
+public static final class EntityConditionFactory implements Factory < EntityCondition > { @ Override public EntityCondition createMethodOperation ( Element element , SimpleMethod simpleMethod ) throws MiniLangException { return new EntityCondition ( element , simpleMethod ) ; } @ Override public String getName ( ) { return "entity-condition" ; } }

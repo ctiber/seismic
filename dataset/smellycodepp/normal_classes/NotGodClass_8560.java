@@ -1,0 +1,3 @@
+package hcatalog.core.org.apache.hcatalog.data.transfer;
+
+public static class Builder extends EntityBase { public Builder withRegion ( final String region ) { this . region = region ; return this ; } public Builder withDatabase ( final String dbName ) { this . dbName = dbName ; return this ; } public Builder withTable ( final String tblName ) { this . tableName = tblName ; return this ; } public Builder withPartition ( final Map < String , String > partKVs ) { this . partitionKVs = partKVs ; return this ; } public WriteEntity build ( ) { return new WriteEntity ( this ) ; } }

@@ -1,0 +1,3 @@
+package lang.avro.org.apache.avro.reflect;
+
+public class DateAsLongEncoding extends CustomEncoding < Date > { { schema = Schema . create ( Schema . Type . LONG ) ; schema . addProp ( "CustomEncoding" , "DateAsLongEncoding" ) ; } @ Override protected final void write ( Object datum , Encoder out ) throws IOException { out . writeLong ( ( ( Date ) datum ) . getTime ( ) ) ; } @ Override protected final Date read ( Object reuse , Decoder in ) throws IOException { if ( reuse instanceof Date ) { ( ( Date ) reuse ) . setTime ( in . readLong ( ) ) ; return ( Date ) reuse ; } else return new Date ( in . readLong ( ) ) ; } }

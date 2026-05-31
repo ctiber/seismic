@@ -1,0 +1,3 @@
+package core.metamodel.org.apache.isis.core.runtime.authentication.standard;
+
+public abstract class PasswordRequestAuthenticatorAbstract extends AuthenticatorAbstract { public PasswordRequestAuthenticatorAbstract ( final IsisConfiguration configuration ) { super ( configuration ) ; } @ Override public final boolean canAuthenticate ( final Class < ? extends AuthenticationRequest > authenticationRequestClass ) { return AuthenticationRequestPassword . class . isAssignableFrom ( authenticationRequestClass ) ; } }

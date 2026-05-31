@@ -1,0 +1,3 @@
+package core.org.apache.calcite.sql.fun;
+
+public class SqlColumnListConstructor extends SqlSpecialOperator { public SqlColumnListConstructor ( ) { super ( "COLUMN_LIST" , SqlKind . COLUMN_LIST , MDX_PRECEDENCE , false , ReturnTypes . COLUMN_LIST , null , OperandTypes . ANY ) ; } public void unparse ( SqlWriter writer , SqlCall call , int leftPrec , int rightPrec ) { writer . keyword ( "ROW" ) ; final SqlWriter . Frame frame = writer . startList ( "(" , ")" ) ; for ( SqlNode operand : call . getOperandList ( ) ) { writer . sep ( "," ) ; operand . unparse ( writer , leftPrec , rightPrec ) ; } writer . endList ( frame ) ; } }

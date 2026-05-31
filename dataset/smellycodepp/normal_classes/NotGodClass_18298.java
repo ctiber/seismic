@@ -1,0 +1,3 @@
+package lang.mapred.org.apache.avro.hadoop.io;
+
+public class AvroKeyComparator < T > extends Configured implements RawComparator < AvroKey < T > > { private Schema mSchema ; private GenericData mDataModel ; @ Override public void setConf ( Configuration conf ) { super . setConf ( conf ) ; if ( null != conf ) { mSchema = AvroJob . getMapOutputKeySchema ( conf ) ; mDataModel = AvroSerialization . createDataModel ( conf ) ; } } @ Override public int compare ( byte [ ] b1 , int s1 , int l1 , byte [ ] b2 , int s2 , int l2 ) { return BinaryData . compare ( b1 , s1 , b2 , s2 , mSchema ) ; } @ Override public int compare ( AvroKey < T > x , AvroKey < T > y ) { return mDataModel . compare ( x . datum ( ) , y . datum ( ) , mSchema ) ; } }

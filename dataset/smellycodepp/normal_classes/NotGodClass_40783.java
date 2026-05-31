@@ -1,0 +1,3 @@
+package client.console.org.apache.syncope.client.console.commons;
+
+public class AnyTypeComparator implements Comparator < AnyTypeTO > , Serializable { private static final long serialVersionUID = - 8227715253094467138L ; @ Override public int compare ( final AnyTypeTO o1 , final AnyTypeTO o2 ) { if ( o1 . getKind ( ) == AnyTypeKind . USER ) { return - 1 ; } if ( o2 . getKind ( ) == AnyTypeKind . USER ) { return 1 ; } if ( o1 . getKind ( ) == AnyTypeKind . GROUP ) { return - 1 ; } if ( o2 . getKind ( ) == AnyTypeKind . GROUP ) { return 1 ; } return ComparatorUtils . < String > naturalComparator ( ) . compare ( o1 . getKey ( ) , o2 . getKey ( ) ) ; } }

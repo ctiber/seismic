@@ -1,0 +1,3 @@
+package core.org.apache.carbondata.core.datastore.columnar;
+
+public class DummyBlockIndexerStorage extends BlockIndexerStorage < byte [ ] [ ] > { @ Override public short [ ] getRowIdPage ( ) { return new short [ 0 ] ; } @ Override public int getRowIdPageLengthInBytes ( ) { return 0 ; } @ Override public short [ ] getRowIdRlePage ( ) { return new short [ 0 ] ; } @ Override public int getRowIdRlePageLengthInBytes ( ) { return 0 ; } @ Override public byte [ ] [ ] getDataPage ( ) { return new byte [ 0 ] [ ] ; } @ Override public short [ ] getDataRlePage ( ) { return new short [ 0 ] ; } @ Override public int getDataRlePageLengthInBytes ( ) { return 0 ; } }

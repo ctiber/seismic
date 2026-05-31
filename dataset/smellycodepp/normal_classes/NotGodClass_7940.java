@@ -1,0 +1,3 @@
+package core.org.apache.calcite.sql;
+
+public class SqlValuesOperator extends SqlSpecialOperator { public SqlValuesOperator ( ) { super ( "VALUES" , SqlKind . VALUES ) ; } public void unparse ( SqlWriter writer , SqlCall call , int leftPrec , int rightPrec ) { final SqlWriter . Frame frame = writer . startList ( SqlWriter . FrameTypeEnum . VALUES , "VALUES" , "" ) ; for ( SqlNode operand : call . getOperandList ( ) ) { writer . sep ( "," ) ; operand . unparse ( writer , 0 , 0 ) ; } writer . endList ( frame ) ; } }

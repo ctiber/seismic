@@ -1,0 +1,3 @@
+package rt.frontend.jaxws.generated.org.apache.cxf.jaxwsee;
+
+@ XmlAccessorType ( XmlAccessType . FIELD ) @ XmlType ( name = "display-nameType" ) public class DisplayNameType extends org . apache . cxf . jaxws . javaee . CString { @ XmlAttribute ( namespace = "http://www.w3.org/XML/1998/namespace" ) protected java . lang . String lang ; public java . lang . String getLang ( ) { return lang ; } public void setLang ( java . lang . String value ) { this . lang = value ; } }

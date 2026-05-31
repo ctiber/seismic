@@ -1,0 +1,3 @@
+package ql.src.org.apache.hadoop.hive.ql.udf.xml;
+
+@ Description ( name = "xpath_int" , value = "_FUNC_(xml, xpath) - Returns an integer value that matches the xpath expression" , extended = "Example:\n" + "  > SELECT _FUNC_('<a><b>1</b><b>2</b></a>','sum(a/b)') FROM src LIMIT 1;\n" + "  3" ) public class UDFXPathInteger extends UDF { private final UDFXPathUtil xpath = new UDFXPathUtil ( ) ; public int evaluate ( String xml , String path ) { return xpath . evalNumber ( xml , path ) . intValue ( ) ; } }

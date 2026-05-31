@@ -1,0 +1,3 @@
+package rt.frontend.jaxrs.org.apache.cxf.jaxrs.spring;
+
+public class NamespaceHandler extends NamespaceHandlerSupport { public void init ( ) { registerBeanDefinitionParser ( "client" , new JAXRSClientFactoryBeanDefinitionParser ( ) ) ; registerBeanDefinitionParser ( "server" , new JAXRSServerFactoryBeanDefinitionParser ( ) ) ; registerBeanDefinitionParser ( "schemaLocation" , new StringBeanDefinitionParser ( ) ) ; } }

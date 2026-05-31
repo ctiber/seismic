@@ -1,0 +1,3 @@
+package sdks.extensions.sql.org.apache.beam.sdk.extensions.sql.impl.interpreter.operator.array;
+
+public class BeamSqlArrayExpression extends BeamSqlExpression { public BeamSqlArrayExpression ( List < BeamSqlExpression > operands ) { super ( operands , SqlTypeName . ARRAY ) ; } @ Override public boolean accept ( ) { return operands . stream ( ) . map ( BeamSqlExpression :: getOutputType ) . distinct ( ) . count ( ) == 1 ; } @ Override public BeamSqlPrimitive evaluate ( Row inputRow , BoundedWindow window , BeamSqlExpressionEnvironment env ) { List < Object > elements = operands . stream ( ) . map ( op -> op . evaluate ( inputRow , window , env ) . getValue ( ) ) . collect ( Collectors . toList ( ) ) ; return BeamSqlPrimitive . of ( outputType , elements ) ; } }

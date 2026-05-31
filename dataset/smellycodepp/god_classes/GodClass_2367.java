@@ -1,0 +1,1 @@
+protected class BaseTimelineSegmentRange extends SegmentRange { public BaseTimelineSegmentRange ( long fromDomainValue , long toDomainValue ) { super ( fromDomainValue , toDomainValue ) ; } }

@@ -1,0 +1,3 @@
+package sdks.extensions.sql.org.apache.beam.sdk.extensions.sql.impl.interpreter.operator.math;
+
+public class BeamSqlAtanExpression extends BeamSqlMathUnaryExpression { public BeamSqlAtanExpression ( List < BeamSqlExpression > operands ) { super ( operands , SqlTypeName . DOUBLE ) ; } @ Override public BeamSqlPrimitive calculate ( BeamSqlPrimitive op ) { return BeamSqlPrimitive . of ( SqlTypeName . DOUBLE , SqlFunctions . atan ( SqlFunctions . toDouble ( op . getValue ( ) ) ) ) ; } }

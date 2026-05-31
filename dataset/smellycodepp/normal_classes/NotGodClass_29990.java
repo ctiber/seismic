@@ -1,0 +1,3 @@
+package org.apache.commons.io;
+
+private static final class Tracker extends PhantomReference < Object > { private final String path ; private final FileDeleteStrategy deleteStrategy ; Tracker ( final String path , final FileDeleteStrategy deleteStrategy , final Object marker , final ReferenceQueue < ? super Object > queue ) { super ( marker , queue ) ; this . path = path ; this . deleteStrategy = deleteStrategy == null ? FileDeleteStrategy . NORMAL : deleteStrategy ; } public String getPath ( ) { return path ; } public boolean delete ( ) { return deleteStrategy . deleteQuietly ( new File ( path ) ) ; } }

@@ -1,0 +1,3 @@
+package graphdb.titan0.org.apache.atlas.repository.graphdb.titan0;
+
+private final class ResultImpl implements AtlasIndexQuery . Result < Titan0Vertex , Titan0Edge > { private TitanIndexQuery . Result < Vertex > wrappedResult ; ResultImpl ( TitanIndexQuery . Result < Vertex > source ) { wrappedResult = source ; } @ Override public AtlasVertex < Titan0Vertex , Titan0Edge > getVertex ( ) { return GraphDbObjectFactory . createVertex ( graph , wrappedResult . getElement ( ) ) ; } @ Override public double getScore ( ) { return wrappedResult . getScore ( ) ; } }

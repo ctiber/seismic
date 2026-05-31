@@ -1,0 +1,3 @@
+package flink.org.apache.flink.api.hadoop.common;
+
+@ Internal public abstract class HadoopOutputFormatCommonBase < T > extends RichOutputFormat < T > { protected transient Credentials credentials ; protected HadoopOutputFormatCommonBase ( Credentials creds ) { this . credentials = creds ; } protected void write ( ObjectOutputStream out ) throws IOException { this . credentials . write ( out ) ; } public void read ( ObjectInputStream in ) throws IOException { this . credentials = new Credentials ( ) ; credentials . readFields ( in ) ; } }

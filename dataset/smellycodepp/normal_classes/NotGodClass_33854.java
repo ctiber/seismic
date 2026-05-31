@@ -1,0 +1,3 @@
+package plugins.ldapbrowser.common.org.apache.directory.studio.ldapbrowser.common.dialogs;
+
+class MultiValuedEntryEditorConfiguration extends EntryEditorWidgetConfiguration { @ Override public ValueEditorManager getValueEditorManager ( TreeViewer viewer ) { if ( valueEditorManager == null ) { valueEditorManager = new ValueEditorManager ( viewer . getTree ( ) , false , false ) ; } return valueEditorManager ; } }

@@ -1,0 +1,3 @@
+package example.application.simpleapp.application.domainapp.application.fixture;
+
+@ DomainService ( nature = NatureOfService . DOMAIN ) public class DomainAppFixtureScriptsSpecificationProvider implements FixtureScriptsSpecificationProvider { public FixtureScriptsSpecification getSpecification ( ) { return FixtureScriptsSpecification . builder ( DomainAppFixtureScriptsSpecificationProvider . class ) . with ( FixtureScripts . MultipleExecutionStrategy . EXECUTE ) . withRunScriptDefault ( DomainAppDemo . class ) . withRunScriptDropDown ( FixtureScriptsSpecification . DropDownPolicy . CHOICES ) . withRecreate ( DomainAppDemo . class ) . build ( ) ; } }

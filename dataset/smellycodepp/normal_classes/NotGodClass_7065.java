@@ -1,0 +1,3 @@
+package core.org.apache.calcite.model;
+
+public class JsonMaterialization { public String view ; public String table ; public Object sql ; public List < String > viewSchemaPath ; public void accept ( ModelHandler handler ) { handler . visit ( this ) ; } @ Override public String toString ( ) { return "JsonMaterialization(table=" + table + ", view=" + view + ")" ; } public String getSql ( ) { return JsonLattice . toString ( sql ) ; } }

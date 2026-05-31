@@ -1,0 +1,3 @@
+package ql.src.org.apache.hadoop.hive.ql.security.authorization.plugin.sqlstd;
+
+@ Private public class SQLStdHiveAuthorizerFactory implements HiveAuthorizerFactory { @ Override public HiveAuthorizer createHiveAuthorizer ( HiveMetastoreClientFactory metastoreClientFactory , HiveConf conf , HiveAuthenticationProvider authenticator ) throws HiveAuthzPluginException { SQLStdHiveAccessController privilegeManager = new SQLStdHiveAccessController ( metastoreClientFactory , conf , authenticator ) ; return new HiveAuthorizerImpl ( privilegeManager , new SQLStdHiveAuthorizationValidator ( metastoreClientFactory , conf , authenticator , privilegeManager ) ) ; } }

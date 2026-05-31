@@ -1,0 +1,3 @@
+package connectors.jcifs.connector.org.apache.manifoldcf.crawler.connectors.sharedrive;
+
+public class SharedDriveParameters { public static final String _rcsid = "@(#)$Id: SharedDriveParameters.java 988245 2010-08-23 18:39:35Z kwright $" ; public final static String server = "Server" ; public final static String domain = "Domain/Realm" ; public final static String username = "User Name" ; public final static String password = "Password" ; public final static String useSIDs = "Use SIDs" ; }

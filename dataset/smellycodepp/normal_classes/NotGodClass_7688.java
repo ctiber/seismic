@@ -1,0 +1,3 @@
+package core.org.apache.calcite.adapter.enumerable;
+
+@ Experimental public class EnumerableTableSpoolRule extends ConverterRule { EnumerableTableSpoolRule ( ) { super ( LogicalTableSpool . class , Convention . NONE , EnumerableConvention . INSTANCE , "EnumerableTableSpoolRule" ) ; } @ Override public RelNode convert ( RelNode rel ) { LogicalTableSpool spool = ( LogicalTableSpool ) rel ; return EnumerableTableSpool . create ( convert ( spool . getInput ( ) , spool . getInput ( ) . getTraitSet ( ) . replace ( EnumerableConvention . INSTANCE ) ) , spool . readType , spool . writeType , spool . getTable ( ) ) ; } }

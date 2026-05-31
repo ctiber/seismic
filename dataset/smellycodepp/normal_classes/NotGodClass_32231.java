@@ -1,0 +1,3 @@
+package src.org.apache.cassandra.gms;
+
+private static class VersionedValueSerializer implements ICompactSerializer < VersionedValue > { public void serialize ( VersionedValue value , DataOutputStream dos ) throws IOException { dos . writeUTF ( value . value ) ; dos . writeInt ( value . version ) ; } public VersionedValue deserialize ( DataInputStream dis ) throws IOException { String value = dis . readUTF ( ) ; int version = dis . readInt ( ) ; return new VersionedValue ( value , version ) ; } }

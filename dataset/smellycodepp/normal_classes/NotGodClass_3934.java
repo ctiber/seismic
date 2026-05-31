@@ -1,0 +1,3 @@
+package test.org.apache.accumulo.test.randomwalk.multitable;
+
+public class Commit extends Test { @ Override public void visit ( State state , Environment env , Properties props ) throws Exception { env . getMultiTableBatchWriter ( ) . flush ( ) ; Long numWrites = state . getLong ( "numWrites" ) ; Long totalWrites = state . getLong ( "totalWrites" ) + numWrites ; log . debug ( "Committed " + numWrites + " writes.  Total writes: " + totalWrites ) ; state . set ( "totalWrites" , totalWrites ) ; state . set ( "numWrites" , Long . valueOf ( 0 ) ) ; } }

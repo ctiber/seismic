@@ -1,0 +1,3 @@
+package rt.databinding.aegis.org.apache.cxf.aegis.type.basic;
+
+public class URIType extends AegisType { @ Override public Object readObject ( final MessageReader reader , final Context context ) { final String value = reader . getValue ( ) ; return null == value ? null : URI . create ( value . trim ( ) ) ; } @ Override public void writeObject ( final Object object , final MessageWriter writer , final Context context ) { writer . writeValue ( ( ( URI ) object ) . toASCIIString ( ) ) ; } }

@@ -1,0 +1,3 @@
+package kar.org.apache.karaf.kar.command.completers;
+
+@ Service public class KarCompleter implements Completer { @ Reference private KarService karService ; public int complete ( Session session , CommandLine commandLine , List < String > candidates ) { StringsCompleter delegate = new StringsCompleter ( ) ; try { for ( String karName : karService . list ( ) ) { delegate . getStrings ( ) . add ( karName ) ; } } catch ( Exception e ) { } return delegate . complete ( session , commandLine , candidates ) ; } }

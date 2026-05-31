@@ -1,0 +1,3 @@
+package src.org.apache.cassandra.io.sstable;
+
+private class CleanupTask implements Runnable { int attempts = 0 ; public void run ( ) { File datafile = new File ( desc . filenameFor ( Component . DATA ) ) ; if ( ! datafile . delete ( ) ) { if ( attempts ++ < DeletionService . MAX_RETRIES ) { StorageService . tasks . schedule ( this , RETRY_DELAY , TimeUnit . MILLISECONDS ) ; return ; } else { logger . error ( "Unable to delete " + datafile + " (it will be removed on server restart)" ) ; return ; } } SSTable . delete ( desc , Sets . difference ( components , Collections . singleton ( Component . DATA ) ) ) ; tracker . spaceReclaimed ( size ) ; } }

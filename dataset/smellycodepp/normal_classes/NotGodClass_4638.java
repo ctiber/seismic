@@ -1,0 +1,3 @@
+package java.org.apache.coyote.http11;
+
+protected class SocketOutputBuffer implements OutputBuffer { @ Override public int doWrite ( ByteChunk chunk , Response res ) throws IOException { int len = chunk . getLength ( ) ; int start = chunk . getStart ( ) ; byte [ ] b = chunk . getBuffer ( ) ; while ( len > 0 ) { int thisTime = len ; if ( bbuf . position ( ) == bbuf . capacity ( ) ) { flushBuffer ( ) ; } if ( thisTime > bbuf . capacity ( ) - bbuf . position ( ) ) { thisTime = bbuf . capacity ( ) - bbuf . position ( ) ; } bbuf . put ( b , start , thisTime ) ; len = len - thisTime ; start = start + thisTime ; } byteCount += chunk . getLength ( ) ; return chunk . getLength ( ) ; } @ Override public long getBytesWritten ( ) { return byteCount ; } }

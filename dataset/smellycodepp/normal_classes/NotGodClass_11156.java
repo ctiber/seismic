@@ -1,0 +1,3 @@
+package core.org.apache.carbondata.core.scan.expression.exception;
+
+public class FilterIllegalMemberException extends Exception { private static final long serialVersionUID = 1L ; private String msg = "" ; public FilterIllegalMemberException ( String msg ) { super ( msg ) ; this . msg = msg ; } public FilterIllegalMemberException ( Throwable t ) { super ( t ) ; } public String getMessage ( ) { return this . msg ; } }

@@ -1,0 +1,3 @@
+package core.org.apache.calcite.jdbc;
+
+public static class LatticeEntryImpl extends LatticeEntry { private final Lattice lattice ; private final CalciteSchema . TableEntry starTableEntry ; public LatticeEntryImpl ( CalciteSchema schema , String name , Lattice lattice ) { super ( schema , name ) ; this . lattice = lattice ; final StarTable starTable = lattice . createStarTable ( ) ; starTableEntry = schema . add ( name , starTable ) ; } public Lattice getLattice ( ) { return lattice ; } public TableEntry getStarTable ( ) { return starTableEntry ; } }

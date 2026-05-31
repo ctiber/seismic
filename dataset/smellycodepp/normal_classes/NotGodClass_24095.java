@@ -1,0 +1,3 @@
+package api.org.apache.cxf.staxutils.transform;
+
+class ParsingEvent { private int event ; private QName name ; private String value ; public ParsingEvent ( int event , QName name , String value ) { this . event = event ; this . name = name ; this . value = value ; } public String toString ( ) { return new StringBuffer ( ) . append ( "Event(" ) . append ( event ) . append ( ", " ) . append ( name ) . append ( ", " ) . append ( value ) . append ( ")" ) . toString ( ) ; } public int getEvent ( ) { return event ; } public QName getName ( ) { return name ; } public String getValue ( ) { return value ; } }

@@ -1,0 +1,3 @@
+package rt.transports.http.org.apache.cxf.transport.http.spring;
+
+public class NamespaceHandler extends NamespaceHandlerSupport { public void init ( ) { registerBeanDefinitionParser ( "conduit" , new HttpConduitBeanDefinitionParser ( ) ) ; registerBeanDefinitionParser ( "trustDecider" , new MessageTrustDeciderBeanDefinitionParser ( ) ) ; registerBeanDefinitionParser ( "authSupplier" , new HttpAuthSupplierBeanDefinitionParser ( ) ) ; registerBeanDefinitionParser ( "destination" , new HttpDestinationBeanDefinitionParser ( ) ) ; } }

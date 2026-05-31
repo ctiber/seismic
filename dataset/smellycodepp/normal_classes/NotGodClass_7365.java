@@ -1,0 +1,3 @@
+package core.org.apache.calcite.sql.dialect;
+
+public class RedshiftSqlDialect extends SqlDialect { public static final SqlDialect DEFAULT = new RedshiftSqlDialect ( EMPTY_CONTEXT . withDatabaseProduct ( DatabaseProduct . REDSHIFT ) . withIdentifierQuoteString ( "\"" ) . withQuotedCasing ( Casing . TO_LOWER ) . withUnquotedCasing ( Casing . TO_LOWER ) . withCaseSensitive ( false ) ) ; public RedshiftSqlDialect ( Context context ) { super ( context ) ; } @ Override public void unparseOffsetFetch ( SqlWriter writer , SqlNode offset , SqlNode fetch ) { unparseFetchUsingLimit ( writer , offset , fetch ) ; } }

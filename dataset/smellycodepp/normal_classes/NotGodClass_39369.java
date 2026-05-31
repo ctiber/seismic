@@ -1,0 +1,3 @@
+package core.applib.org.apache.isis.applib.layout.grid.bootstrap3;
+
+public abstract class BS3RowContent extends BS3ElementAbstract { private static final long serialVersionUID = 1L ; private Size size ; @ XmlAttribute ( required = false ) public Size getSize ( ) { return size ; } public void setSize ( final Size size ) { this . size = size ; } private BS3RowContentOwner owner ; @ XmlTransient public BS3RowContentOwner getOwner ( ) { return owner ; } public void setOwner ( final BS3RowContentOwner owner ) { this . owner = owner ; } @ Override @ XmlTransient @ Programmatic public BS3Grid getGrid ( ) { return getOwner ( ) . getGrid ( ) ; } }

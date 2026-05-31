@@ -1,0 +1,3 @@
+package org.apache.commons.compress.archivers.zip;
+
+private static final class SeekableByteChannelCompressor extends StreamCompressor { private final SeekableByteChannel channel ; public SeekableByteChannelCompressor ( final Deflater deflater , final SeekableByteChannel channel ) { super ( deflater ) ; this . channel = channel ; } @ Override protected final void writeOut ( final byte [ ] data , final int offset , final int length ) throws IOException { channel . write ( ByteBuffer . wrap ( data , offset , length ) ) ; } }

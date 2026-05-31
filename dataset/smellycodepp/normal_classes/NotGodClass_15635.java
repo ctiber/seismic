@@ -1,0 +1,3 @@
+package tools.org.apache.kafka.trogdor.rest;
+
+public class WorkerStopping extends WorkerState { private final long startedMs ; private final JsonNode status ; @ JsonCreator public WorkerStopping ( @ JsonProperty ( "taskId" ) String taskId , @ JsonProperty ( "spec" ) TaskSpec spec , @ JsonProperty ( "startedMs" ) long startedMs , @ JsonProperty ( "status" ) JsonNode status ) { super ( taskId , spec ) ; this . startedMs = startedMs ; this . status = status == null ? NullNode . instance : status ; } @ JsonProperty @ Override public long startedMs ( ) { return startedMs ; } @ JsonProperty @ Override public JsonNode status ( ) { return status ; } @ Override public boolean stopping ( ) { return true ; } @ Override public boolean running ( ) { return true ; } }

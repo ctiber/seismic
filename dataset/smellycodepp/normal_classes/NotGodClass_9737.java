@@ -1,0 +1,3 @@
+package ql.src.org.apache.hadoop.hive.ql.security;
+
+public class SessionStateUserAuthenticator implements HiveAuthenticationProvider { private final List < String > groupNames = new ArrayList < String > ( ) ; protected Configuration conf ; private SessionState sessionState ; @ Override public List < String > getGroupNames ( ) { return groupNames ; } @ Override public String getUserName ( ) { return sessionState . getUserName ( ) ; } @ Override public void destroy ( ) throws HiveException { return ; } @ Override public Configuration getConf ( ) { return null ; } @ Override public void setConf ( Configuration arg0 ) { } @ Override public void setSessionState ( SessionState sessionState ) { this . sessionState = sessionState ; } }

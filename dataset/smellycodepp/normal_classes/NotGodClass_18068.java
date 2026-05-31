@@ -1,0 +1,3 @@
+package org.apache.commons.net.tftp;
+
+public final class TFTPWriteRequestPacket extends TFTPRequestPacket { public TFTPWriteRequestPacket ( InetAddress destination , int port , String filename , int mode ) { super ( destination , port , TFTPPacket . WRITE_REQUEST , filename , mode ) ; } TFTPWriteRequestPacket ( DatagramPacket datagram ) throws TFTPPacketException { super ( TFTPPacket . WRITE_REQUEST , datagram ) ; } }

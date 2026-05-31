@@ -1,0 +1,3 @@
+package framework.minilang.src.org.ofbiz.minilang.method.entityops;
+
+public static final class ClearCacheLineFactory implements Factory < ClearCacheLine > { @ Override public ClearCacheLine createMethodOperation ( Element element , SimpleMethod simpleMethod ) throws MiniLangException { return new ClearCacheLine ( element , simpleMethod ) ; } @ Override public String getName ( ) { return "clear-cache-line" ; } }

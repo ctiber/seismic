@@ -1,0 +1,3 @@
+package common.org.apache.drill.common.exceptions;
+
+public class DrillException extends Exception { public DrillException ( ) { super ( ) ; } public DrillException ( String message , Throwable cause , boolean enableSuppression , boolean writableStackTrace ) { super ( message , cause , enableSuppression , writableStackTrace ) ; } public DrillException ( String message , Throwable cause ) { super ( message , cause ) ; } public DrillException ( String message ) { super ( message ) ; } public DrillException ( Throwable cause ) { super ( cause ) ; } static final org . slf4j . Logger logger = org . slf4j . LoggerFactory . getLogger ( DrillException . class ) ; }

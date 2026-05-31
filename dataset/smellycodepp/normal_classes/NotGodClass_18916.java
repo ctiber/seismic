@@ -1,0 +1,3 @@
+package exec.vector.org.apache.drill.exec.vector.complex.impl;
+
+abstract class AbstractBaseWriter implements FieldWriter { final FieldWriter parent ; private int index ; public AbstractBaseWriter ( FieldWriter parent ) { this . parent = parent ; } @ Override public String toString ( ) { return super . toString ( ) + "[index = " + index + ", parent = " + parent + "]" ; } @ Override public FieldWriter getParent ( ) { return parent ; } public boolean isRoot ( ) { return parent == null ; } int idx ( ) { return index ; } @ Override public void setPosition ( int index ) { this . index = index ; } @ Override public void end ( ) { } }

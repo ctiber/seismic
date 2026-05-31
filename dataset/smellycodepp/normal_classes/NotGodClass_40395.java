@@ -1,0 +1,3 @@
+package client.console.org.apache.syncope.client.console.wicket.markup.html.link;
+
+public class VeilPopupSettings extends PopupSettings { private static final long serialVersionUID = - 2727046117490858226L ; @ Override public String getPopupJavaScript ( ) { return "document.getElementById('" + Constants . VEIL_INDICATOR_MARKUP_ID + "').style.display = 'block';" + super . getPopupJavaScript ( ) . substring ( 0 , super . getPopupJavaScript ( ) . lastIndexOf ( "return false;" ) ) + "var loop = setInterval(function() { " + "  if(w.closed) {" + "    clearInterval(loop);" + "    window.location.reload(false);" + "  }" + "}, 1000);" + "return false" ; } }

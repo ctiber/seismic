@@ -1,0 +1,3 @@
+package app.org.apache.roller.weblogger.pojos;
+
+public class WeblogEntryTagComparator implements Comparator < WeblogEntryTag > , Serializable { private static final long serialVersionUID = 3720914385178339406L ; public WeblogEntryTagComparator ( ) { } public int compare ( WeblogEntryTag o1 , WeblogEntryTag o2 ) { return o1 . getName ( ) . toString ( ) . compareTo ( o2 . getName ( ) . toString ( ) ) ; } }

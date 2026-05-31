@@ -1,0 +1,3 @@
+package plugins.ldapbrowser.ui.org.apache.directory.studio.ldapbrowser.ui.editors.schemabrowser;
+
+class ATDViewerFilter extends ViewerFilter { public boolean select ( Viewer viewer , Object parentElement , Object element ) { if ( element instanceof AttributeType ) { AttributeType atd = ( AttributeType ) element ; boolean matched = Strings . toLowerCase ( SchemaUtils . toString ( atd ) ) . indexOf ( Strings . toLowerCase ( filterText . getText ( ) ) ) != - 1 || Strings . toLowerCase ( atd . getOid ( ) ) . indexOf ( Strings . toLowerCase ( filterText . getText ( ) ) ) != - 1 ; return matched ; } return false ; } }

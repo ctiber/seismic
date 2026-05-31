@@ -1,0 +1,3 @@
+package clients.org.apache.kafka.clients.admin;
+
+@ InterfaceStability . Evolving public class CreateDelegationTokenResult { private final KafkaFuture < DelegationToken > delegationToken ; CreateDelegationTokenResult ( KafkaFuture < DelegationToken > delegationToken ) { this . delegationToken = delegationToken ; } public KafkaFuture < DelegationToken > delegationToken ( ) { return delegationToken ; } }

@@ -1,0 +1,3 @@
+package org.apache.commons.net.telnet;
+
+public class EchoOptionHandler extends TelnetOptionHandler { public EchoOptionHandler ( boolean initlocal , boolean initremote , boolean acceptlocal , boolean acceptremote ) { super ( TelnetOption . ECHO , initlocal , initremote , acceptlocal , acceptremote ) ; } public EchoOptionHandler ( ) { super ( TelnetOption . ECHO , false , false , false , false ) ; } @ Override public int [ ] answerSubnegotiation ( int suboptionData [ ] , int suboptionLength ) { return null ; } @ Override public int [ ] startSubnegotiationLocal ( ) { return null ; } @ Override public int [ ] startSubnegotiationRemote ( ) { return null ; } }

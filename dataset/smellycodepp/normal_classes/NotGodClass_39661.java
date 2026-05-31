@@ -1,0 +1,3 @@
+package core.metamodel.org.apache.isis.core.metamodel.facets.properties.property.modify;
+
+@ Deprecated public class PropertyDomainEventFacetForPropertyInteractionAnnotation extends PropertyDomainEventFacetAbstract { public PropertyDomainEventFacetForPropertyInteractionAnnotation ( final Class < ? extends PropertyDomainEvent < ? , ? > > eventType , final PropertyOrCollectionAccessorFacet getterFacet , final ServicesInjector servicesInjector , final SpecificationLoader specificationLoader , final FacetHolder holder ) { super ( eventType , getterFacet , holder , servicesInjector , specificationLoader ) ; } }

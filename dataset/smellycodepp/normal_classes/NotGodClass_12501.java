@@ -1,0 +1,3 @@
+package framework.entity.src.org.ofbiz.entity.util;
+
+public class CachedClassLoaderInit implements CachedClassLoader . Init { public void loadClasses ( ClassLoader loader ) throws ClassNotFoundException { CachedClassLoader . registerClass ( loader . loadClass ( "org.ofbiz.entity.GenericValue" ) ) ; CachedClassLoader . registerClass ( loader . loadClass ( "org.ofbiz.entity.GenericPK" ) ) ; CachedClassLoader . registerClass ( loader . loadClass ( "org.ofbiz.entity.GenericEntity" ) ) ; } }

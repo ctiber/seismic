@@ -1,0 +1,3 @@
+package plugins.ldapbrowser.common.org.apache.directory.studio.ldapbrowser.common.dialogs.preferences;
+
+public class ViewsPreferencePage extends PreferencePage implements IWorkbenchPreferencePage { public ViewsPreferencePage ( ) { super ( Messages . getString ( "ViewsPreferencePage.Views" ) ) ; setDescription ( Messages . getString ( "ViewsPreferencePage.Description" ) ) ; noDefaultAndApplyButton ( ) ; } public void init ( IWorkbench workbench ) { } protected Control createContents ( Composite parent ) { return parent ; } }

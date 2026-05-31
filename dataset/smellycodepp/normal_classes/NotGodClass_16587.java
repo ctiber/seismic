@@ -1,0 +1,3 @@
+package src.org.apache.cocoon.components.treeprocessor.sitemap;
+
+public class ReadNodeBuilder extends AbstractProcessingNodeBuilder implements ThreadSafe { public ProcessingNode buildNode ( Configuration config ) throws Exception { String type = this . treeBuilder . getTypeForStatement ( config , Reader . ROLE + "Selector" ) ; ReadNode node = new ReadNode ( type , VariableResolverFactory . getResolver ( config . getAttribute ( "src" , null ) , this . manager ) , VariableResolverFactory . getResolver ( config . getAttribute ( "mime-type" , null ) , this . manager ) , config . getAttributeAsInteger ( "status-code" , - 1 ) ) ; return this . treeBuilder . setupNode ( node , config ) ; } }

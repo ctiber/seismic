@@ -1,0 +1,3 @@
+package plugins.ldapbrowser.common.org.apache.directory.studio.ldapbrowser.common.filtereditor;
+
+public static class AutoEditParameters { public String text ; public int offset ; public int length ; public int caretOffset ; public boolean shiftsCaret ; public AutoEditParameters ( String text , int offset , int length , int caretOffset , boolean shiftsCaret ) { this . text = text ; this . offset = offset ; this . length = length ; this . caretOffset = caretOffset ; this . shiftsCaret = shiftsCaret ; } }

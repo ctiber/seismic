@@ -1,0 +1,3 @@
+package java.org.apache.jasper.compiler;
+
+class IncludeState { int cursor , line , col ; int fileId ; String fileName ; String baseDir ; char [ ] stream = null ; IncludeState ( int inCursor , int inLine , int inCol , int inFileId , String name , String inBaseDir , String inEncoding , char [ ] inStream ) { cursor = inCursor ; line = inLine ; col = inCol ; fileId = inFileId ; fileName = name ; baseDir = inBaseDir ; encoding = inEncoding ; stream = inStream ; } }

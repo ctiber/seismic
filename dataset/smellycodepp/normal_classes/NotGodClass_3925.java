@@ -1,0 +1,3 @@
+package test.org.apache.accumulo.test.randomwalk.conditional;
+
+public class Flush extends Test { @ Override public void visit ( State state , Environment env , Properties props ) throws Exception { String table = state . getString ( "tableName" ) ; Random rand = ( Random ) state . get ( "rand" ) ; Connector conn = env . getConnector ( ) ; Text row1 = new Text ( Utils . getBank ( rand . nextInt ( ( Integer ) state . get ( "numBanks" ) ) ) ) ; Text row2 = new Text ( Utils . getBank ( rand . nextInt ( ( Integer ) state . get ( "numBanks" ) ) ) ) ; if ( row1 . compareTo ( row2 ) >= 0 ) { row1 = null ; row2 = null ; } log . debug ( "flushing " + row1 + " " + row2 ) ; conn . tableOperations ( ) . flush ( table , row1 , row2 , rand . nextBoolean ( ) ) ; } }

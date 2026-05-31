@@ -1,0 +1,3 @@
+package sdks.core.org.apache.beam.sdk.runners;
+
+@ AutoValue abstract class PTransformReplacement < InputT extends PInput , OutputT extends POutput > { public static < InputT extends PInput , OutputT extends POutput > PTransformReplacement < InputT , OutputT > of ( InputT input , PTransform < InputT , OutputT > transform ) { return new AutoValue_PTransformOverrideFactory_PTransformReplacement ( input , transform ) ; } public abstract InputT getInput ( ) ; public abstract PTransform < InputT , OutputT > getTransform ( ) ; }

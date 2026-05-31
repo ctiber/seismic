@@ -1,0 +1,3 @@
+package sdk.sdk.org.apache.carbondata.sdk.file.arrow;
+
+class ByteWriter extends ArrowFieldWriter { private TinyIntVector tinyIntVector ; public ByteWriter ( TinyIntVector tinyIntVector ) { super ( tinyIntVector ) ; this . tinyIntVector = tinyIntVector ; } @ Override public void setNull ( ) { this . tinyIntVector . setNull ( count ) ; } @ Override public void setValue ( Object data , int ordinal ) { this . tinyIntVector . setSafe ( count , ( byte ) data ) ; } }

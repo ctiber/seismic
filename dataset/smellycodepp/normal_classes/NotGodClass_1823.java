@@ -1,0 +1,3 @@
+package bundle.core.org.apache.karaf.bundle.command;
+
+@ Command ( scope = "bundle" , name = "uninstall" , description = "Uninstall bundles." ) @ Service public class Uninstall extends BundlesCommand { public Uninstall ( ) { defaultAllBundles = false ; errorMessage = "Error uninstalling bundle" ; } @ Override protected void executeOnBundle ( Bundle bundle ) throws Exception { bundle . uninstall ( ) ; } }

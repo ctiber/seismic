@@ -1,0 +1,3 @@
+package core.applib.org.apache.isis.applib.spec;
+
+public abstract class SpecificationAnd implements Specification { private final Specification [ ] specifications ; public SpecificationAnd ( final Specification ... specifications ) { this . specifications = specifications ; } @ Override public String satisfies ( final Object obj ) { final ReasonBuffer buf = new ReasonBuffer ( ) ; for ( final Specification specification : specifications ) { final String reasonNotSatisfiedIfAny = specification . satisfies ( obj ) ; buf . append ( reasonNotSatisfiedIfAny ) ; } return buf . getReason ( ) ; } }

@@ -1,0 +1,3 @@
+package connectors.webcrawler.connector.org.apache.manifoldcf.crawler.connectors.webcrawler;
+
+public class FormItem implements FormDataElement { protected String name ; protected String value ; protected boolean isEnabled ; protected int type ; public FormItem ( String name , String value , int type , boolean isEnabled ) { this . name = name ; this . value = value ; this . isEnabled = isEnabled ; this . type = type ; } public void setEnabled ( boolean enabled ) { isEnabled = enabled ; } public boolean getEnabled ( ) { return isEnabled ; } public void setValue ( String value ) { this . value = value ; } public int getType ( ) { return type ; } public String getElementName ( ) { return name ; } public String getElementValue ( ) { return value ; } }

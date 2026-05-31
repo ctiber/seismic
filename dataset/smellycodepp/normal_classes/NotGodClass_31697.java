@@ -1,0 +1,3 @@
+package app.org.apache.roller.weblogger.ui.struts2.admin;
+
+public class UserAdmin extends UIAction { public UserAdmin ( ) { this . actionName = "userAdmin" ; this . desiredMenu = "admin" ; this . pageTitle = "userAdmin.title.searchUser" ; } private AuthMethod authMethod = WebloggerConfig . getAuthMethod ( ) ; public List < String > requiredGlobalPermissionActions ( ) { return Collections . singletonList ( GlobalPermission . ADMIN ) ; } public boolean isWeblogRequired ( ) { return false ; } public String execute ( ) { return SUCCESS ; } public String getAuthMethod ( ) { return authMethod . name ( ) ; } }

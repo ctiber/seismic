@@ -1,0 +1,3 @@
+package client.console.org.apache.syncope.client.console.rest;
+
+private class PolicyComparator implements Comparator < AbstractPolicyTO > , Serializable { private static final long serialVersionUID = - 4921433085213223115L ; @ Override public int compare ( final AbstractPolicyTO left , final AbstractPolicyTO right ) { return left == null ? - 1 : right == null ? 1 : left . getDescription ( ) . compareTo ( right . getDescription ( ) ) ; } }

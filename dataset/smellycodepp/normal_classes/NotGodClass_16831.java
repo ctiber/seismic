@@ -1,0 +1,3 @@
+package src.blocks.scratchpad.org.apache.cocoon.transformation.constrained;
+
+public class ElementValueEvent extends ContainerElementEndEvent { private String elementValue ; private Attributes elementAttributes ; public ElementValueEvent ( Object source , String elementName , String elementValue , Attributes elementAttributes ) { super ( source , elementName ) ; this . elementValue = elementValue ; this . elementAttributes = elementAttributes ; } public String getElementValue ( ) { return elementValue ; } public Attributes getAttributes ( ) { return elementAttributes ; } public String getAttribute ( String attributeName ) { return elementAttributes . getValue ( attributeName ) . toString ( ) ; } }

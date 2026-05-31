@@ -1,0 +1,3 @@
+package framework.widget.src.org.ofbiz.widget.tree;
+
+public static class IfEntityPermission extends TreeCondition { protected EntityPermissionChecker permissionChecker ; public IfEntityPermission ( ModelTree modelTree , Element condElement ) { super ( modelTree , condElement ) ; this . permissionChecker = new EntityPermissionChecker ( condElement ) ; } @ Override public boolean eval ( Map < String , ? extends Object > context ) { boolean passed = permissionChecker . runPermissionCheck ( context ) ; return passed ; } }

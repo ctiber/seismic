@@ -1,0 +1,3 @@
+package features.core.org.apache.karaf.features;
+
+public class FeatureEvent extends EventObject { public enum EventType { FeatureInstalled , FeatureUninstalled } private final EventType type ; private final Feature feature ; private final String region ; private final boolean replay ; public FeatureEvent ( EventType type , Feature feature , String region , boolean replay ) { super ( feature ) ; this . type = type ; this . feature = feature ; this . region = region ; this . replay = replay ; } public EventType getType ( ) { return type ; } public Feature getFeature ( ) { return feature ; } public String getRegion ( ) { return region ; } public boolean isReplay ( ) { return replay ; } }

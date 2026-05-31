@@ -1,0 +1,1 @@
+public static class FileDirBoth extends EnumeratedAttribute { public static final String FILE = "file" ; public static final String DIR = "dir" ; public String [ ] getValues ( ) { return new String [ ] { FILE , DIR , "both" } ; } }

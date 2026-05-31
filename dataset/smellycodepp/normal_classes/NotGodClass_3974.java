@@ -1,0 +1,3 @@
+package plc4j.api.org.apache.plc4x.api.exceptions;
+
+public class PlcUnsupportedProtocolException extends PlcConnectionException { public PlcUnsupportedProtocolException ( String message ) { super ( message ) ; } public PlcUnsupportedProtocolException ( String message , Throwable cause ) { super ( message , cause ) ; } public PlcUnsupportedProtocolException ( Throwable cause ) { super ( cause ) ; } }

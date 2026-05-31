@@ -1,0 +1,3 @@
+package core.metamodel.org.apache.isis.core.metamodel.interactions;
+
+public abstract class UsabilityContext < T extends UsabilityEvent > extends InteractionContext < T > { private final Where where ; public UsabilityContext ( final InteractionContextType interactionType , final ObjectAdapter targetAdapter , final Identifier identifier , final InteractionInitiatedBy interactionInitiatedBy , final Where where ) { super ( interactionType , interactionInitiatedBy , identifier , targetAdapter ) ; this . where = where ; } public Where getWhere ( ) { return where ; } }

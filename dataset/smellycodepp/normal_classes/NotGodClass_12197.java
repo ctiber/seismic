@@ -1,0 +1,3 @@
+package applications.accounting.src.org.ofbiz.accounting;
+
+@ SuppressWarnings ( "serial" ) public class AccountingException extends GenericServiceException { public AccountingException ( ) { super ( ) ; } public AccountingException ( Throwable throwable ) { super ( throwable ) ; } public AccountingException ( String string ) { super ( string ) ; } public AccountingException ( String string , Throwable throwable ) { super ( string , throwable ) ; } }

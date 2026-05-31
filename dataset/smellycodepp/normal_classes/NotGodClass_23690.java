@@ -1,0 +1,3 @@
+package rt.ws.policy.org.apache.cxf.ws.policy.attachment;
+
+@ NoJSR250Annotations public class ServiceModelPolicyProvider extends AbstractPolicyProvider { public ServiceModelPolicyProvider ( Bus b ) { super ( b ) ; } public Policy getEffectivePolicy ( BindingFaultInfo bfi ) { return bfi . getExtensor ( Policy . class ) ; } public Policy getEffectivePolicy ( BindingMessageInfo bmi ) { return bmi . getExtensor ( Policy . class ) ; } public Policy getEffectivePolicy ( BindingOperationInfo bi ) { return bi . getExtensor ( Policy . class ) ; } public Policy getEffectivePolicy ( EndpointInfo ei ) { return ei . getExtensor ( Policy . class ) ; } public Policy getEffectivePolicy ( ServiceInfo si ) { return si . getExtensor ( Policy . class ) ; } }

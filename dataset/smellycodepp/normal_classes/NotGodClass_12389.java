@@ -1,0 +1,3 @@
+package framework.base.src.org.ofbiz.base.conversion;
+
+public class GenericSingletonToList < T > extends AbstractConverter < T , List < T > > { public GenericSingletonToList ( Class < T > sourceClass ) { super ( sourceClass , List . class ) ; } public List < T > convert ( T obj ) throws ConversionException { List < T > tempList = FastList . newInstance ( ) ; tempList . add ( obj ) ; return tempList ; } }

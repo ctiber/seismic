@@ -1,0 +1,3 @@
+package core.applib.org.apache.isis.applib.annotation;
+
+@ Deprecated public abstract class Adapter implements PublishingPayloadFactoryForAction { private final PublishedAction . PayloadFactory payloadFactory ; @ Deprecated public Adapter ( final PublishedAction . PayloadFactory payloadFactory ) { this . payloadFactory = payloadFactory ; } @ Deprecated @ Override public EventPayload payloadFor ( Identifier actionIdentifier , Object target , List < Object > arguments , Object result ) { return payloadFactory . payloadFor ( actionIdentifier , target , arguments , result ) ; } @ Deprecated public PublishedAction . PayloadFactory getPayloadFactory ( ) { return payloadFactory ; } }

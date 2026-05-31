@@ -1,0 +1,3 @@
+package client.console.org.apache.syncope.client.console.wicket.markup.html.form.preview;
+
+@ BinaryPreview ( mimeTypes = { } ) public class DefaultPreviewer extends AbstractBinaryPreviewer { private static final long serialVersionUID = 3338812359368457349L ; public DefaultPreviewer ( final String id , final String mimeType ) { super ( id , mimeType ) ; } @ Override public Component preview ( final byte [ ] uploadedBytes ) { return this ; } }

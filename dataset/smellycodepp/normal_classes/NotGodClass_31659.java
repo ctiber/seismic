@@ -1,0 +1,3 @@
+package app.org.apache.roller.weblogger.ui.rendering.model;
+
+public class MediaFileFeedURLS { public String getRss ( ) { return urlStrategy . getWeblogFeedURL ( weblog , locale , "files" , "rss" , null , null , null , false , true ) ; } public String rss ( String catName , boolean excerpts ) { return urlStrategy . getWeblogFeedURL ( weblog , locale , "files" , "rss" , catName , null , null , excerpts , true ) ; } public String getAtom ( ) { return urlStrategy . getWeblogFeedURL ( weblog , locale , "files" , "atom" , null , null , null , false , true ) ; } public String atom ( String catName , boolean excerpts ) { return urlStrategy . getWeblogFeedURL ( weblog , locale , "files" , "atom" , catName , null , null , excerpts , true ) ; } }

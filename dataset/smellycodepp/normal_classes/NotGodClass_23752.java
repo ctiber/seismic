@@ -1,0 +1,3 @@
+package rt.ws.security.org.apache.cxf.ws.security.policy;
+
+public final class SP13Constants { public static final String SP_NS = "http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200802" ; public static final String SP_PREFIX = "sp13" ; public static final QName USERNAME_TOKEN_CREATED = new QName ( SP_NS , "Created" , SP_PREFIX ) ; public static final QName USERNAME_TOKEN_NONCE = new QName ( SP_NS , "Nonce" , SP_PREFIX ) ; private SP13Constants ( ) { } }

@@ -1,0 +1,3 @@
+package api.org.apache.cxf.service.model;
+
+public class DescriptionInfo extends AbstractPropertiesHolder implements NamedItem { QName name ; String uri ; List < AbstractDescriptionElement > described = new ArrayList < AbstractDescriptionElement > ( ) ; public DescriptionInfo ( ) { } public void setName ( QName n ) { name = n ; } public QName getName ( ) { return name ; } public void setBaseURI ( String u ) { uri = u ; } public String getBaseURI ( ) { return uri ; } public List < AbstractDescriptionElement > getDescribed ( ) { return described ; } }

@@ -1,0 +1,3 @@
+package sdks.core.org.apache.beam.sdk.transforms.reflect;
+
+@ AutoValue public abstract static class GetRestrictionCoderMethod implements DoFnMethod { @ Override public abstract Method targetMethod ( ) ; public abstract TypeDescriptor < ? > coderT ( ) ; static GetRestrictionCoderMethod create ( Method targetMethod , TypeDescriptor < ? > coderT ) { return new AutoValue_DoFnSignature_GetRestrictionCoderMethod ( targetMethod , coderT ) ; } }

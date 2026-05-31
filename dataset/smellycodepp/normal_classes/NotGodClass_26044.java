@@ -1,0 +1,3 @@
+package org.apache.commons.math3.optimization;
+
+private static class DataTransferObject implements Serializable { private static final long serialVersionUID = 20120513L ; private final double [ ] point ; private final double value ; public DataTransferObject ( final double [ ] point , final double value ) { this . point = point . clone ( ) ; this . value = value ; } private Object readResolve ( ) { return new PointValuePair ( point , value , false ) ; } }

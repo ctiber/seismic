@@ -1,0 +1,3 @@
+package framework.minilang.src.org.ofbiz.minilang.method.callops;
+
+private final class ResultToSession { private final FlexibleMapAccessor < Object > resultFma ; private final FlexibleServletAccessor < Object > requestFsa ; private ResultToSession ( Element element ) { requestFsa = new FlexibleServletAccessor < Object > ( element . getAttribute ( "session-name" ) , element . getAttribute ( "result-name" ) ) ; resultFma = FlexibleMapAccessor . getInstance ( element . getAttribute ( "result-name" ) ) ; } private void exec ( MethodContext methodContext , Map < String , Object > resultMap ) { requestFsa . put ( methodContext . getRequest ( ) . getSession ( ) , resultFma . get ( resultMap ) , methodContext . getEnvMap ( ) ) ; } }

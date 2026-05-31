@@ -1,0 +1,3 @@
+package core.metamodel.org.apache.isis.core.metamodel.facets.actions.action.command;
+
+public class CommandFacetForActionAnnotationAsConfigured extends CommandFacetForActionAnnotation { CommandFacetForActionAnnotationAsConfigured ( final Persistence persistence , final ExecuteIn executeIn , final Enablement enablement , final FacetHolder holder , final ServicesInjector servicesInjector ) { super ( persistence , executeIn , enablement , null , holder , servicesInjector ) ; } }

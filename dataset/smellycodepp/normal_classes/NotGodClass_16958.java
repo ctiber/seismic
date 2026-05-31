@@ -1,0 +1,3 @@
+package src.org.apache.cocoon.bean.helpers;
+
+public class AntDelegate { public static int process ( Document xconf , String uriGroup ) throws Exception { CocoonBean cocoon = new CocoonBean ( ) ; OutputStreamListener listener = new OutputStreamListener ( System . out ) ; cocoon . addListener ( listener ) ; BeanConfigurator . configure ( xconf , cocoon , "" , uriGroup , listener ) ; System . out . println ( CocoonBean . getProlog ( ) ) ; if ( ! cocoon . isPrecompileOnly ( ) && cocoon . getTargetCount ( ) == 0 ) { listener . messageGenerated ( "Please, specify at least one starting URI." ) ; System . exit ( 1 ) ; } cocoon . initialize ( ) ; cocoon . process ( ) ; cocoon . dispose ( ) ; listener . complete ( ) ; return listener . isSuccessful ( ) ? 0 : 1 ; } }
