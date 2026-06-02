@@ -387,23 +387,20 @@ def fig_sensitivity_heatmaps(sensitivity_expert_csv, sensitivity_god_csv,
     """
     Two heatmaps side by side:
       Left  — mean SEISMIC score on Expert Monoliths, coloured by tier
-      Right — Expert-God discriminative gap, all cells negative
+      Right — Expert-God discriminative gap (Expert − God); positive = correct ordering
     """
     import pandas as pd
     from matplotlib.colors import LinearSegmentedColormap, BoundaryNorm
     from matplotlib.patches import Patch
 
     tau_m_vals  = [10, 15, 20, 25, 30]
-    lambda_vals = [0.05, 0.08, 0.10, 0.12, 0.15]
+    lambda_vals = [0.003, 0.005, 0.010, 0.100, 0.150]
 
-    # Load sensitivity CSVs
     df_exp = pd.read_csv(sensitivity_expert_csv)
     df_god = pd.read_csv(sensitivity_god_csv)
 
-    # Build score grids
-    grid_exp  = np.zeros((5, 5))
-    grid_god  = np.zeros((5, 5))
-    grid_gap  = np.zeros((5, 5))
+    grid_exp = np.zeros((5, 5))
+    grid_god = np.zeros((5, 5))
 
     for df, grid in [(df_exp, grid_exp), (df_god, grid_god)]:
         for _, row in df.iterrows():
@@ -414,7 +411,8 @@ def fig_sensitivity_heatmaps(sensitivity_expert_csv, sensitivity_god_csv,
             except (ValueError, KeyError):
                 pass
 
-    grid_gap = grid_god - grid_exp
+    # Expert − God: positive means correct Expert > God ordering
+    grid_gap = grid_exp - grid_god
 
     fig, axes = plt.subplots(1, 2, figsize=(13, 5))
 
@@ -426,13 +424,11 @@ def fig_sensitivity_heatmaps(sensitivity_expert_csv, sensitivity_god_csv,
                    'Monitor for Drift\n(0.50–0.69)',
                    'Functional Integrity\n(≥0.70)']
 
-    cmap_tier = LinearSegmentedColormap.from_list(
-        'tiers', tier_colors, N=256)
+    cmap_tier = LinearSegmentedColormap.from_list('tiers', tier_colors, N=256)
     norm_tier = BoundaryNorm(tier_bounds, cmap_tier.N)
 
     ax = axes[0]
-    im = ax.imshow(grid_exp, cmap=cmap_tier, norm=norm_tier,
-                   aspect='auto', origin='lower')
+    ax.imshow(grid_exp, cmap=cmap_tier, norm=norm_tier, aspect='auto', origin='lower')
 
     for i in range(5):
         for j in range(5):
@@ -451,24 +447,21 @@ def fig_sensitivity_heatmaps(sensitivity_expert_csv, sensitivity_god_csv,
 
     legend_patches = [Patch(color=c, label=l)
                       for c, l in zip(tier_colors, tier_labels)]
-    ax.legend(handles=legend_patches, loc='upper right',
-              fontsize=7.5, framealpha=0.85)
+    ax.legend(handles=legend_patches, loc='upper right', fontsize=7.5, framealpha=0.85)
 
-    # ── Right: gap heatmap ────────────────────────────────────────────────────
+    # ── Right: gap heatmap (Expert − God, diverging around 0) ────────────────
     ax2 = axes[1]
-    vmax = 0.0
-    vmin = float(np.min(grid_gap)) * 1.05
-
-    cmap_gap = plt.cm.RdYlGn_r
-    im2 = ax2.imshow(grid_gap, cmap=cmap_gap,
-                     vmin=vmin, vmax=vmax,
+    absmax = float(np.max(np.abs(grid_gap))) * 1.05
+    im2 = ax2.imshow(grid_gap, cmap=plt.cm.RdYlGn,
+                     vmin=-absmax, vmax=absmax,
                      aspect='auto', origin='lower')
 
     for i in range(5):
         for j in range(5):
+            color = 'white' if abs(grid_gap[i, j]) > absmax * 0.3 else 'black'
             ax2.text(j, i, f'{grid_gap[i, j]:+.3f}',
                      ha='center', va='center', fontsize=9,
-                     color='white', fontweight='bold')
+                     color=color, fontweight='bold')
 
     ax2.set_xticks(range(5))
     ax2.set_xticklabels([str(l) for l in lambda_vals], fontsize=10)
@@ -476,12 +469,12 @@ def fig_sensitivity_heatmaps(sensitivity_expert_csv, sensitivity_god_csv,
     ax2.set_yticklabels([str(t) for t in tau_m_vals], fontsize=10)
     ax2.set_xlabel(r'Decay rate $\lambda_m$', fontsize=11)
     ax2.set_ylabel(r'Threshold $\tau_m$', fontsize=11)
-    ax2.set_title('Discriminative Gap (God − Expert)\n'
-                  'All values positive — ordering is parameter-invariant',
+    ax2.set_title('Discriminative Gap (Expert $-$ God)\n'
+                  'Green = Expert $>$ God (correct); Red = ordering inverted',
                   fontsize=11)
 
     plt.colorbar(im2, ax=ax2, fraction=0.046, pad=0.04,
-                 label='God mean − Expert mean')
+                 label='Expert mean $-$ God mean')
 
     fig.tight_layout()
     fig.savefig(out, dpi=300, bbox_inches='tight')

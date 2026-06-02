@@ -7,7 +7,7 @@ with pure arithmetic — no repeated embedding calls.
 
 Grid:
     tau_m  in {10, 15, 20, 25, 30}   (Structural Stability Threshold)
-    lambda_m in {0.05, 0.08, 0.10, 0.12, 0.15}  (Decay Rate)
+    lambda_m in {0.003, 0.005, 0.010, 0.100, 0.150}  (Decay Rate)
 
 tau_s and lambda_s are held fixed at the paper defaults (20 and 0.03).
 
@@ -108,11 +108,11 @@ def extract_semantic_data(code):
 # ── Grid definition
 
 TAU_M_VALUES    = [10, 15, 20, 25, 30]
-LAMBDA_M_VALUES = [0.05, 0.08, 0.10, 0.12, 0.15]
+LAMBDA_M_VALUES = [0.003, 0.005, 0.010, 0.100, 0.150]
 
-# Paper defaults (shown as reference in output; lambda_m=0.02 is below the grid)
+# Paper defaults (calibrated value lambda_m=0.005 is included in the grid)
 PAPER_TAU_M    = 15
-PAPER_LAMBDA_M = 0.02
+PAPER_LAMBDA_M = 0.005
 PAPER_TAU_S    = 20
 PAPER_LAMBDA_S = 0.03
 
@@ -397,7 +397,7 @@ def main():
 
     print("\nDone.")
     print(f"Note: paper defaults (τ_m={PAPER_TAU_M}, λ_m={PAPER_LAMBDA_M}) are "
-          "below the swept lambda range and shown above as a reference baseline.")
+          "included in the swept lambda range.")
 
 
 if __name__ == '__main__':
